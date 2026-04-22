@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" type="text/css" href="/blog/css/style.css">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="alternate" type="application/atom+xml" href="/blog/index.atom" title="wizard book (atom)">
+
+    <meta name="fediverse:creator" content="@wizardbook@mastodon.social">
+    <link rel="me" href="https://mastodon.social/@wizardbook" />
+
+    <meta property="og:title" content="unluckylisp">
+    <meta property="og:description" content="A site about wizards and programming.">
+    <meta property="og:url" content="https://unluckylisp.com/blog/">
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="unluckylisp">
+    <meta name="twitter:description" content="A site about wizards and programming.">
+
+
+  <title>GTD with Org Mode (and more!) -- Wizard Book</title>
+  
+</head>
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\\[','\\]']]
+  }
+};
+</script>
+<script id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<div class="site-frame">
+  <header class="blog-header">
+<div class="top-row">
+  <div class="left-group">
+    <span class="site-title"><a href="/blog">wizard blog</a></span>
+  </div>
+  <div class="right-lambda">
+    <a href="/" class="lambda-link">λ</a>
+  </div>
+</div>
+
+    <div class="bottom-row">
+      <nav class="nav-bar">
+        <div class="nav-left">
+          λ <a href="/blog">Main</a>
+          <a href="/blog/tags">Tags</a>
+          <a href="/blog/archive">Archive</a>
+          <a href="/blog/index.atom">Feed</a> λ
+        </div>
+      </nav>
+    </div>
+  </header>
+
+
+<div class="page-wrapper">
+<p><small><time datetime="2025-08-19T17:35:00-04:00">2025-08-19 :: 17:35 [UTC -04:00]</time></small><br>
+
+<strong><u>GTD with Org Mode (and more!)</u></strong></p>
+
+<main>
+<p>Part of my summer has been transferring and collecting all of my data onto GNU Emacs, for a multitude of reasons and purposes. One very important part of this wonderful program that I maximized use of is Org mode. I was using Org mode for awhile, to format documents and export to other formats. Using it as a note taker was another great use. What I underestimated was org-agenda and the ability to do Emacs calendar to a whole new level. Not only was I able to get an amazing scheduling tool, but this tool is so intuitive and in line with book <i>Getting Things Done</i> (GTD for short) by David Allen. GTD time management and workflows emphasize breaking down tasks, sequencing, organizing, as a means to, well, Get Things Done! It is amazing how compatible and well-built org-agenda is for this resolution of time management. I definitely recommend the read of this book as well as watching videos that may break it down even further.</p>
+<p>GTD has been tremendously helpful in not replacing my habits or other time management methods, but rather it does so much to expand on it. I actually found that GTD was very intuitive and easy to get into. The book emphasizes comfortable work environments to maximize workflow. Org mode is, in my experience, the workflow that emulates GTD. There are a lot of agenda and calendar programs out there, but this beautiful program maximizes time management and allows me to actually accomplish tasks.</p>
+<p>Using Org to creater headlines and many levels, as well as using [/] and [%] to track progress, makes scheduling and task/time management like I am managing a quest/side-quest menu in a video game. It is actually fun for me. There is a sense of celebration of accomplishment in Org mode. There is also a lack of overwhelming energy in adding TODO's, as I am organized in addition of tasks as well as managing ongoing and rainyday/wishful thinking tasks. For once, I can say that agenda-ing has become fun. Not just life-hack-fun, but genuine fun. Below is a short snippet of my configuration using org-agenda. All of my agenda org files are in ~/org and I have several files in this, which org-agenda makes it a breeze to keep track of.</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><span style="color: #99968b;">;; </span><span style="color: #99968b;">A basic configuration for Agenda
+</span>(<span style="color: #8ac6f2; font-weight: bold;">require</span> '<span style="color: #e5786d;">org</span>)
+
+(add-hook 'org-mode-hook #'visual-line-mode)
+(<span style="color: #8ac6f2; font-weight: bold;">setq</span>
+ org-directory <span style="color: #95e454;">"~/org/"</span>
+ org-agenda-files (list org-directory)
+ org-tags-column -60
+
+ <span style="color: #99968b;">;; </span><span style="color: #99968b;">TODO keywords and log settings
+</span> org-todo-keywords '((sequence <span style="color: #95e454;">"TODO(t)"</span> <span style="color: #95e454;">"WAIT(w!)"</span> <span style="color: #95e454;">"|"</span> <span style="color: #95e454;">"CANCEL(c!)"</span> <span style="color: #95e454;">"DONE(d!)"</span>))
+ org-log-done 'time
+ org-log-into-drawer t
+ org-insert-heading-respect-content t
+ org-M-RET-may-split-line '((default . nil))
+
+ <span style="color: #99968b;">;; </span><span style="color: #99968b;">Calendar mark settings
+</span> org-hide-emphasis-markers nil
+ calendar-mark-holidays-flag t)
+
+<span style="color: #99968b;">;; </span><span style="color: #99968b;">Keybindings for Org
+</span>(global-set-key (kbd <span style="color: #95e454;">"C-c l"</span>) #'org-store-link)
+(global-set-key (kbd <span style="color: #95e454;">"C-c a"</span>) #'org-agenda)
+(global-set-key (kbd <span style="color: #95e454;">"C-c c"</span>) #'org-capture)
+</pre>
+</div>
+
+<p>Another form of time management that I utilize is the pomodoro technique as well as block scheduling. Pomodoro and Block scheduling are made a lot easier because of Org mode. GTD helps me figure out which methods are most applicable for different projects. Pomodoro has been helpful for working on ongoing tasks, like studying or work-related tasks that have no real true end. Block scheduling has been helpful in mapping out very busy days, where there are a lot of places to be and no real room for time to spare. Block scheduling is made easy with org-agenda's formats. I use org-pomodoro on Emacs as my primary means for pomodoro timing. It is very useful as I can use my agenda files and also clock in how much time I spent on them. This is a very healthy way to task, as it encourages breaks and rewards yet also keeps your mind from wandering elsewhere. I have forked the org-pomodoro code to update it, as well as add more features to make this timer more integral with tracking with the quality features and also in principle to GTD.</p>
+<p>This post was a mere reflection and promotion of Emacs and Org mode helping me get things done. The real heroes are elsewhere. Here are some resources to help, if you are interested in further reading.</p>
+<ul class="org-ul">
+<li>Getting Things Done<br />
+<a href="https://gettingthingsdone.com/">https://gettingthingsdone.com/</a><br /></li>
+<li>The Pomodoro Technique<br />
+<a href="https://www.todoist.com/productivity-methods/pomodoro-technique">https://www.todoist.com/productivity-methods/pomodoro-technique</a><br /></li>
+<li>Org mode for GTD and other Task management systems<br />
+<a href="https://orgmode.org/worg/org-gtd-etc.html">https://orgmode.org/worg/org-gtd-etc.html</a><br /></li>
+<li>Getting Things Done with Emacs<br />
+<a href="https://lucidmanager.org/productivity/getting-things-done-with-emacs/">https://lucidmanager.org/productivity/getting-things-done-with-emacs/</a><br /></li>
+<li>Org mode manual<br />
+<a href="https://www.gnu.org/software/emacs/manual/html_mono/org.html">https://www.gnu.org/software/emacs/manual/html_mono/org.html</a><br /></li>
+<li>Org Agenda commands<br />
+<a href="https://orgmode.org/manual/Agenda-Commands.html">https://orgmode.org/manual/Agenda-Commands.html</a><br /></li>
+<li>My fork of org-pomodoro<br />
+<a href="https://github.com/luckless-wizard/org-pomodoro">https://github.com/luckless-wizard/org-pomodoro</a><br /></li>
+<li>Org-pomodoro<br />
+<a href="https://github.com/marcinkoziej/org-pomodoro">https://github.com/marcinkoziej/org-pomodoro</a><br /></li>
+</ul>
+
+</main>
+<p>:: <a href="/blog/tags/emacs">#emacs</a> <a href="/blog/tags/org-mode">#org-mode</a> <a href="/blog/tags/time-management">#time-management</a></p>
+
+</div>
+<footer class="blog-footer">
+Generated by <a href="https://github.com/luckless-wizard/ganzu-gikoru">ganzu-gikoru</a>.<br>
+Powered by GNU Emacs and Org mode.
+</footer>

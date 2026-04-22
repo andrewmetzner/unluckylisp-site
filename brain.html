@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Algorithm Effect on Focus</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background: #0d0d15;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    gap: 10px;
+  }
+
+  .title {
+    font-size: 1.05rem;
+    font-weight: 300;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #666;
+  }
+
+  canvas {
+    border-radius: 14px;
+    cursor: crosshair;
+  }
+
+  .subtitle {
+    font-size: 0.72rem;
+    color: #444;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+
+  /* Meters row */
+  .meters {
+    display: flex;
+    gap: 48px;
+    align-items: center;
+  }
+
+  .meter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 220px;
+  }
+
+  .meter-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  .meter-label {
+    font-size: 0.65rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #555;
+  }
+
+  .meter-val {
+    font-size: 1rem;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+    transition: color 0.3s;
+  }
+
+  .meter-track {
+    width: 100%;
+    height: 6px;
+    background: #1c1c2e;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+
+  .meter-fill {
+    height: 100%;
+    border-radius: 3px;
+    transition: width 0.12s ease, background 0.4s ease;
+  }
+
+  #dop-fill  { background: linear-gradient(90deg, #f7971e, #ffd200); }
+  #foc-fill  { background: linear-gradient(90deg, #00b4db, #0ef); }
+
+  /* Algorithm level */
+  .algo {
+    font-size: 0.6rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #e94560;
+    transition: opacity 0.3s;
+  }
+
+  /* Floating labels (absolute, injected by JS) */
+  .floater {
+    position: fixed;
+    font-size: 0.78rem;
+    font-weight: 600;
+    pointer-events: none;
+    white-space: nowrap;
+    animation: floatUp 0.85s ease forwards;
+  }
+
+  @keyframes floatUp {
+    0%   { opacity: 1; transform: translateY(0)    scale(1);    }
+    20%  { opacity: 1; transform: translateY(-8px) scale(1.08); }
+    100% { opacity: 0; transform: translateY(-44px) scale(0.9); }
+  }
+
+  /* Game-over overlay */
+  #overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.82);
+    backdrop-filter: blur(10px);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    z-index: 50;
+  }
+  #overlay.show { display: flex; }
+
+  #overlay h2 {
+    font-size: 2.4rem;
+    font-weight: 800;
+    letter-spacing: 4px;
+    color: #e94560;
+  }
+
+  #overlay .tagline {
+    font-size: 0.9rem;
+    color: #888;
+    max-width: 380px;
+    text-align: center;
+    line-height: 1.7;
+  }
+
+  .stats {
+    display: flex;
+    gap: 36px;
+    margin-top: 4px;
+  }
+
+  .stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .stat-val {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #ffd200;
+  }
+
+  .stat-lbl {
+    font-size: 0.6rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #555;
+  }
+
+  #overlay button {
+    margin-top: 10px;
+    padding: 11px 34px;
+    background: transparent;
+    border: 1.5px solid #e94560;
+    border-radius: 40px;
+    color: #e94560;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+  }
+  #overlay button:hover {
+    background: #e94560;
+    color: #fff;
+  }
+</style>
+</head>
+<body>
+
+<div class="title">How Social Media Algorithms Affect Your Brain</div>
+
+<canvas id="c" width="580" height="360"></canvas>
+
+<div class="subtitle">Click the notifications — each one spikes dopamine and drains focus</div>
+
+<div class="meters">
+  <div class="meter-group">
+    <div class="meter-header">
+      <span class="meter-label">Dopamine</span>
+      <span class="meter-val" id="dop-val" style="color:#ffd200">0%</span>
+    </div>
+    <div class="meter-track"><div id="dop-fill" class="meter-fill" style="width:0%"></div></div>
+  </div>
+
+  <div class="meter-group">
+    <div class="meter-header">
+      <span class="meter-label">Focus</span>
+      <span class="meter-val" id="foc-val" style="color:#0ef">100%</span>
+    </div>
+    <div class="meter-track"><div id="foc-fill" class="meter-fill" style="width:100%"></div></div>
+  </div>
+</div>
+
+<div class="algo" id="algo">Algorithm Intensity &mdash; Level 1</div>
+
+<!-- Game-over overlay -->
+<div id="overlay">
+  <h2>FOCUS LOST</h2>
+  <p class="tagline">
+    The algorithm kept delivering dopamine hits until your prefrontal cortex
+    couldn't maintain attention. This is your brain on endless scroll.
+  </p>
+  <div class="stats">
+    <div class="stat">
+      <div class="stat-val" id="s-clicks">0</div>
+      <div class="stat-lbl">Notifications clicked</div>
+    </div>
+    <div class="stat">
+      <div class="stat-val" id="s-time">0s</div>
+      <div class="stat-lbl">Time survived</div>
+    </div>
+    <div class="stat">
+      <div class="stat-val" id="s-level">1</div>
+      <div class="stat-lbl">Algorithm level reached</div>
+    </div>
+  </div>
+  <button onclick="reset()">Try Again</button>
+</div>
+
+<script>
+const canvas = document.getElementById('c');
+const ctx    = canvas.getContext('2d');
+const W = canvas.width, H = canvas.height;
+
+// ── Audio ─────────────────────────────────────────────────────────────────────
+let ac = null;
+function audio() {
+  if (!ac) ac = new (window.AudioContext || window.webkitAudioContext)();
+  if (ac.state === 'suspended') ac.resume();
+  return ac;
+}
+
+// Short rewarding ping when you click a notification
+function sndPop(color) {
+  const a = audio();
+  const freqs = { '#ef5350':900, '#42a5f5':660, '#26c6da':760, '#ab47bc':1020, '#ff7043':840 };
+  const f = freqs[color] || 880;
+  const osc  = a.createOscillator();
+  const gain = a.createGain();
+  osc.connect(gain); gain.connect(a.destination);
+  osc.type = 'sine';
+  osc.frequency.setValueAtTime(f, a.currentTime);
+  osc.frequency.exponentialRampToValueAtTime(f * 1.4, a.currentTime + 0.03);
+  osc.frequency.exponentialRampToValueAtTime(f * 0.75, a.currentTime + 0.12);
+  gain.gain.setValueAtTime(0.28, a.currentTime);
+  gain.gain.exponentialRampToValueAtTime(0.001, a.currentTime + 0.18);
+  osc.start(a.currentTime); osc.stop(a.currentTime + 0.18);
+}
+
+// Electric zap — synapse firing when a brain region activates
+function sndSynapse(regionColor) {
+  const a = audio();
+  // White noise burst
+  const buf  = a.createBuffer(1, a.sampleRate * 0.09, a.sampleRate);
+  const data = buf.getChannelData(0);
+  for (let i = 0; i < data.length; i++) data[i] = Math.random() * 2 - 1;
+  const src  = a.createBufferSource(); src.buffer = buf;
+  const bpf  = a.createBiquadFilter(); bpf.type = 'bandpass'; bpf.frequency.value = 2400; bpf.Q.value = 0.6;
+  const gain = a.createGain();
+  gain.gain.setValueAtTime(0.12, a.currentTime);
+  gain.gain.exponentialRampToValueAtTime(0.001, a.currentTime + 0.09);
+  src.connect(bpf); bpf.connect(gain); gain.connect(a.destination);
+  src.start();
+
+  // Short tone layer on top
+  const osc  = a.createOscillator();
+  const og   = a.createGain();
+  osc.connect(og); og.connect(a.destination);
+  osc.type = 'triangle';
+  osc.frequency.setValueAtTime(1800, a.currentTime);
+  osc.frequency.exponentialRampToValueAtTime(400, a.currentTime + 0.1);
+  og.gain.setValueAtTime(0.1, a.currentTime);
+  og.gain.exponentialRampToValueAtTime(0.001, a.currentTime + 0.1);
+  osc.start(a.currentTime); osc.stop(a.currentTime + 0.1);
+}
+
+// Low heartbeat thud — plays when focus is critical
+let lastBeat = 0;
+function sndHeartbeat() {
+  const a = audio();
+  const osc  = a.createOscillator();
+  const gain = a.createGain();
+  osc.connect(gain); gain.connect(a.destination);
+  osc.type = 'sine';
+  osc.frequency.setValueAtTime(80, a.currentTime);
+  osc.frequency.exponentialRampToValueAtTime(40, a.currentTime + 0.12);
+  gain.gain.setValueAtTime(0.5, a.currentTime);
+  gain.gain.exponentialRampToValueAtTime(0.001, a.currentTime + 0.18);
+  osc.start(a.currentTime); osc.stop(a.currentTime + 0.18);
+}
+
+// Descending doom chord on game over
+function sndGameOver() {
+  const a = audio();
+  [440, 370, 294, 196].forEach((freq, i) => {
+    const osc  = a.createOscillator();
+    const gain = a.createGain();
+    osc.connect(gain); gain.connect(a.destination);
+    osc.type = 'sawtooth';
+    osc.frequency.value = freq;
+    const t = a.currentTime + i * 0.22;
+    gain.gain.setValueAtTime(0, t);
+    gain.gain.linearRampToValueAtTime(0.18, t + 0.04);
+    gain.gain.exponentialRampToValueAtTime(0.001, t + 0.35);
+    osc.start(t); osc.stop(t + 0.38);
+  });
+}
+
+// ── State ────────────────────────────────────────────────────────────────────
+let dopamine = 0, focus = 100;
+let notifs   = [];
+let sparks   = [];
+let pulses   = [];
+let algoLvl  = 1;
+let clicks   = 0;
+let startMs  = Date.now();
+let dead     = false;
+let lastSpawn = 0;
+
+// ── Brain regions ─────────────────────────────────────────────────────────────
+const REGIONS = [
+  { label: "Prefrontal Cortex",   x: 390, y: 125, r: 22, base: "#4fc3f7", color: "#4fc3f7" },
+  { label: "Nucleus Accumbens",   x: 288, y: 185, r: 20, base: "#ffd200", color: "#ffd200" },
+  { label: "Amygdala",            x: 345, y: 235, r: 18, base: "#ef5350", color: "#ef5350" },
+  { label: "Hippocampus",         x: 238, y: 218, r: 20, base: "#66bb6a", color: "#66bb6a" },
+  { label: "Anterior Cingulate",  x: 322, y: 168, r: 18, base: "#ce93d8", color: "#ce93d8" },
+];
+
+// ── Notification types ────────────────────────────────────────────────────────
+// region index matches REGIONS array: 0=Prefrontal, 1=Nucleus Accumbens, 2=Amygdala, 3=Hippocampus, 4=Anterior Cingulate
+const TYPES = [
+  { icon: "❤️", color: "#ef5350", label: "+Like",     region: 1 }, // Nucleus Accumbens — dopamine reward
+  { icon: "💬", color: "#42a5f5", label: "+Comment",  region: 2 }, // Amygdala — social/emotional response
+  { icon: "🔁", color: "#26c6da", label: "+Share",    region: 0 }, // Prefrontal Cortex — decision-making
+  { icon: "👤", color: "#ab47bc", label: "+Follow",   region: 1 }, // Nucleus Accumbens — social validation
+  { icon: "🔥", color: "#ff7043", label: "+Trending", region: 4 }, // Anterior Cingulate — attention hijack
+];
+
+// ── Draw brain ────────────────────────────────────────────────────────────────
+function drawBrainShape() {
+  ctx.beginPath();
+  ctx.moveTo(152, 196);
+  ctx.bezierCurveTo(132,  86, 298,  56, 376,  76);
+  ctx.bezierCurveTo(455,  92, 485, 138, 466, 188);
+  ctx.bezierCurveTo(506, 218, 488, 276, 448, 298);
+  ctx.bezierCurveTo(398, 326, 276, 326, 216, 306);
+  ctx.bezierCurveTo(156, 290, 126, 256, 152, 196);
+
+  const g = ctx.createRadialGradient(320, 185, 10, 320, 185, 180);
+  g.addColorStop(0, '#252540');
+  g.addColorStop(1, '#111128');
+  ctx.fillStyle   = g;
+  ctx.fill();
+  ctx.strokeStyle = '#2e2e50';
+  ctx.lineWidth   = 1.5;
+  ctx.stroke();
+}
+
+function drawSulci() {
+  ctx.strokeStyle = '#1a1a32';
+  ctx.lineWidth   = 2;
+  const lines = [
+    [[302,70],[312,118],[344,132],[352,160]],
+    [[196,118],[238,140],[248,170],[242,202]],
+    [[388, 98],[420,138],[432,180],[422,222]],
+    [[198,258],[250,264],[302,278],[352,268]],
+    [[180,180],[210,190],[230,210]],
+  ];
+  lines.forEach(pts => {
+    ctx.beginPath();
+    ctx.moveTo(pts[0][0], pts[0][1]);
+    for (let i = 1; i < pts.length; i++) ctx.lineTo(pts[i][0], pts[i][1]);
+    ctx.stroke();
+  });
+}
+
+function drawRegions() {
+  REGIONS.forEach(r => {
+    // Soft glow
+    const g = ctx.createRadialGradient(r.x, r.y, 0, r.x, r.y, r.r * 2);
+    g.addColorStop(0, r.color + '50');
+    g.addColorStop(1, r.color + '00');
+    ctx.beginPath();
+    ctx.arc(r.x, r.y, r.r * 2, 0, Math.PI * 2);
+    ctx.fillStyle = g;
+    ctx.fill();
+
+    // Circle
+    ctx.beginPath();
+    ctx.arc(r.x, r.y, r.r, 0, Math.PI * 2);
+    ctx.fillStyle   = r.color + 'aa';
+    ctx.fill();
+    ctx.strokeStyle = r.color;
+    ctx.lineWidth   = 1.5;
+    ctx.stroke();
+
+    // Label (two-word wrap)
+    const words = r.label.split(' ');
+    const mid   = Math.ceil(words.length / 2);
+    const l1    = words.slice(0, mid).join(' ');
+    const l2    = words.slice(mid).join(' ');
+    ctx.fillStyle    = '#ffffffcc';
+    ctx.font         = '8.5px Segoe UI';
+    ctx.textAlign    = 'center';
+    ctx.textBaseline = 'middle';
+    if (l2) {
+      ctx.fillText(l1, r.x, r.y - 5.5);
+      ctx.fillText(l2, r.x, r.y + 5.5);
+    } else {
+      ctx.fillText(l1, r.x, r.y);
+    }
+  });
+}
+
+function drawNotifs() {
+  const now = Date.now();
+  notifs.forEach(n => {
+    const age   = (now - n.born) / n.life;
+    const alpha = age > 0.72 ? 1 - (age - 0.72) / 0.28 : 1;
+
+    ctx.save();
+    ctx.globalAlpha = alpha;
+
+    // Glow ring
+    ctx.shadowColor = n.t.color;
+    ctx.shadowBlur  = 14;
+    ctx.beginPath();
+    ctx.arc(n.x, n.y, 18, 0, Math.PI * 2);
+    ctx.fillStyle   = '#13131f';
+    ctx.fill();
+    ctx.strokeStyle = n.t.color;
+    ctx.lineWidth   = 2;
+    ctx.stroke();
+    ctx.shadowBlur = 0;
+
+    // Emoji
+    ctx.font             = '13px serif';
+    ctx.textAlign        = 'center';
+    ctx.textBaseline     = 'middle';
+    ctx.fillText(n.t.icon, n.x, n.y);
+
+    ctx.restore();
+
+    // Countdown arc
+    ctx.beginPath();
+    ctx.arc(n.x, n.y, 22, -Math.PI / 2, -Math.PI / 2 + (1 - age) * Math.PI * 2);
+    ctx.strokeStyle = n.t.color + '44';
+    ctx.lineWidth   = 2;
+    ctx.stroke();
+  });
+}
+
+function drawSparks() {
+  sparks.forEach((s, i) => {
+    ctx.beginPath();
+    ctx.arc(s.x, s.y, s.sz, 0, Math.PI * 2);
+    ctx.fillStyle   = s.color;
+    ctx.globalAlpha = s.a;
+    ctx.fill();
+    ctx.globalAlpha = 1;
+    s.x  += s.vx;
+    s.y  += s.vy;
+    s.vy += 0.12;
+    s.a  -= 0.045;
+    s.sz *= 0.96;
+    if (s.a <= 0) sparks.splice(i, 1);
+  });
+}
+
+function drawPulses() {
+  pulses.forEach((p, i) => {
+    ctx.beginPath();
+    ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+    ctx.strokeStyle = p.color;
+    ctx.globalAlpha = p.a;
+    ctx.lineWidth   = 1.8;
+    ctx.stroke();
+    ctx.globalAlpha = 1;
+    p.r += 3;
+    p.a -= 0.045;
+    if (p.a <= 0) pulses.splice(i, 1);
+  });
+}
+
+function draw() {
+  ctx.clearRect(0, 0, W, H);
+  drawBrainShape();
+  drawSulci();
+  drawPulses();
+  drawRegions();
+  drawNotifs();
+  drawSparks();
+}
+
+// ── Helpers ───────────────────────────────────────────────────────────────────
+function spawn() {
+  const t    = TYPES[Math.floor(Math.random() * TYPES.length)];
+  const life = Math.max(1400, 3200 - algoLvl * 240);
+  notifs.push({
+    x: 145 + Math.random() * 300,
+    y:  65 + Math.random() * 250,
+    born: Date.now(), life, t,
+  });
+}
+
+function flash(region) {
+  const orig     = region.color;
+  region.color   = '#ffffff';
+  for (let i = 0; i < 3; i++)
+    setTimeout(() => pulses.push({ x: region.x, y: region.y, r: region.r, color: orig, a: 0.8 }), i * 140);
+  setTimeout(() => region.color = orig, 220);
+}
+
+function floater(x, y, text, color) {
+  const el  = document.createElement('div');
+  el.className   = 'floater';
+  el.textContent = text;
+  el.style.color = color;
+  const rect = canvas.getBoundingClientRect();
+  el.style.left = (rect.left + x - 20) + 'px';
+  el.style.top  = (rect.top  + y - 12) + 'px';
+  document.body.appendChild(el);
+  setTimeout(() => el.remove(), 860);
+}
+
+function updateMeters() {
+  document.getElementById('dop-fill').style.width   = dopamine + '%';
+  document.getElementById('dop-val').textContent    = Math.floor(dopamine) + '%';
+  document.getElementById('foc-fill').style.width   = focus + '%';
+  document.getElementById('foc-val').textContent    = Math.floor(focus) + '%';
+
+  const foc = document.getElementById('foc-fill');
+  if      (focus < 25) { foc.style.background = 'linear-gradient(90deg,#e94560,#c62a47)'; document.getElementById('foc-val').style.color = '#e94560'; }
+  else if (focus < 55) { foc.style.background = 'linear-gradient(90deg,#ff9800,#f44336)'; document.getElementById('foc-val').style.color = '#ff9800'; }
+  else                 { foc.style.background = 'linear-gradient(90deg,#00b4db,#0ef)';    document.getElementById('foc-val').style.color = '#0ef';    }
+}
+
+// ── Click handler ─────────────────────────────────────────────────────────────
+canvas.addEventListener('click', e => {
+  if (dead) return;
+  const r  = canvas.getBoundingClientRect();
+  const mx = e.clientX - r.left;
+  const my = e.clientY - r.top;
+
+  for (let i = 0; i < notifs.length; i++) {
+    const n  = notifs[i];
+    const dx = mx - n.x, dy = my - n.y;
+    if (dx*dx + dy*dy <= 22*22) {
+      notifs.splice(i, 1);
+
+      const region = REGIONS[n.t.region];
+      flash(region);
+      sndPop(n.t.color);
+      setTimeout(() => sndSynapse(region.color), 60);
+
+      for (let s = 0; s < 14; s++)
+        sparks.push({
+          x: n.x, y: n.y,
+          vx: (region.x - n.x) / 12 + (Math.random() - 0.5) * 3.5,
+          vy: (region.y - n.y) / 12 + (Math.random() - 0.5) * 3.5,
+          sz: Math.random() * 4 + 2, a: 1, color: n.t.color,
+        });
+
+      dopamine = Math.min(100, dopamine + 13);
+      focus    = Math.max(0,   focus    -  7);
+      clicks++;
+
+      floater(n.x,      n.y - 12, n.t.label,    n.t.color);
+      floater(region.x, region.y - region.r - 14, region.label, region.color);
+      updateMeters();
+      break;
+    }
+  }
+});
+
+// ── Game over ─────────────────────────────────────────────────────────────────
+function triggerDeath() {
+  dead = true;
+  const elapsed = Math.floor((Date.now() - startMs) / 1000);
+  document.getElementById('s-clicks').textContent = clicks;
+  document.getElementById('s-time').textContent   = elapsed + 's';
+  document.getElementById('s-level').textContent  = algoLvl;
+  sndGameOver();
+  document.getElementById('overlay').classList.add('show');
+}
+
+function reset() {
+  dopamine = 0; focus = 100;
+  notifs = []; sparks = []; pulses = [];
+  algoLvl = 1; clicks = 0;
+  startMs = Date.now(); dead = false;
+  lastSpawn = 0;
+  REGIONS.forEach(r => r.color = r.base);
+  updateMeters();
+  document.getElementById('algo').textContent = 'Algorithm Intensity \u2014 Level 1';
+  document.getElementById('overlay').classList.remove('show');
+}
+
+// ── Main loop ─────────────────────────────────────────────────────────────────
+function loop() {
+  draw();
+
+  if (!dead) {
+    const now     = Date.now();
+    const elapsed = (now - startMs) / 1000;
+
+    algoLvl = Math.min(8, 1 + Math.floor(elapsed / 8));
+    document.getElementById('algo').textContent = `Algorithm Intensity \u2014 Level ${algoLvl}`;
+
+    // Remove expired
+    notifs = notifs.filter(n => now - n.born < n.life);
+
+    // Spawn rate scales with level
+    const interval = Math.max(300, 1500 - algoLvl * 145);
+    if (now - lastSpawn > interval) { spawn(); lastSpawn = now; }
+
+    // Passive focus drain increases with level
+    focus    -= 0.012 + algoLvl * 0.007;
+    dopamine -= 0.04;
+    if (focus    < 0) focus    = 0;
+    if (dopamine < 0) dopamine = 0;
+
+    updateMeters();
+    // Heartbeat when focus is critical
+    if (focus < 28 && Date.now() - lastBeat > 900) {
+      sndHeartbeat();
+      lastBeat = Date.now();
+    }
+
+    if (focus <= 0) triggerDeath();
+  }
+
+  requestAnimationFrame(loop);
+}
+
+updateMeters();
+loop();
+</script>
+</body>
+</html>

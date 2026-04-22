@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+<id>https://unluckylisp.com/blog/</id>
+<title>blog atom feed</title>
+<updated>2026-03-13T02:13:04+00:00</updated>
+<generator>https://github.com/luckless-wizard/ganzu-gikoru</generator>
+<author>
+  <name>wizard</name>
+  <uri>https://unluckylisp.com/blog/</uri>
+</author>
+<link rel="alternate" href="https://unluckylisp.com/blog/"/>
+<link rel="self" href="https://unluckylisp.com/blog/index.atom" type="application/atom+xml"/>
+<entry>
+  <id>https://unluckylisp.com/blog/fun-news-for-future-prospects.org</id>
+  <title>Fun news for future prospects</title>
+  <link href="https://unluckylisp.com/blog/posts/fun-news-for-future-prospects.html"/>
+  <published>2026-03-12T22:05:35-04:00</published>
+  <updated>2026-03-12T22:05:35-04:00</updated>
+  <content type="html"><![CDATA[<p>
+Life as a full-time student is real busy. Not to mention work and all the other fun stuff as a non-traditional scholar (I am not out of high school or doing this for my parents or at all in early adulthood). Being a career academic is non-conventional, but that is really what keeps me going in this struggle. (School should not be a business or a means to make money, but should instead be to gather knowledge and bring a collective of intelligent minds together&#x2026; If only, if only.)
+</p>
+<div id="outline-container-org60cf40a" class="outline-2">
+<h2 id="org60cf40a">web game project</h2>
+<div class="outline-text-2" id="text-org60cf40a">
+<p>
+I am in the progress of making a barebones, simple webgame. This will be, perhaps, adapted into a much bigger project. I really like tactical, turn-based games, and I really enjoy battletech and other older minis games. So, I really look forward to building an RPG that is multi-player, but not necessarily on a global/wide scale. I want to incorporate some of the graphics from smaller programs into this game. I might be expanding currently existing projects in order to generate graphics more effectively for the game. Procedural generation will play a role in this, for sure.
+</p>
+</div>
+</div>
+<div id="outline-container-org7d31388" class="outline-2">
+<h2 id="org7d31388">emacs config (again) uploaded to github</h2>
+<div class="outline-text-2" id="text-org7d31388">
+<p>
+I uploaded my emacs config, again. I just moved everything to <code>~/.emacs.d</code> and used <code>.gitignore</code> rather than have to manually update a separate repo. Trying to keep up my gitfoo. I might even run a git server here, for some stuff if projects get big enough and need to just be legitimized, personal hosted or whatever. <a href="https://github.com/andrewmetzner/my-emacs-config">new repo here</a> 
+</p>
+</div>
+</div>
+<div id="outline-container-org3a0a54e" class="outline-2">
+<h2 id="org3a0a54e">image board project</h2>
+<div class="outline-text-2" id="text-org3a0a54e">
+<p>
+this might not be touched until Summer. I do want to do imageboard software, expanding on the textboard software I already wrote. Maybe I'll do it in a different language this time, who knows.
+</p>
+</div>
+</div>
+<div id="outline-container-org1fba7b6" class="outline-2">
+<h2 id="org1fba7b6">ongoing maintenance</h2>
+<div class="outline-text-2" id="text-org1fba7b6">
+<p>
+I want to expand the site, and add to the databases and resources. It is a work in progress, and not necessarily a priority right now. I would love to add more games/board games to the database, as I've been playing cards more (poker, mainly).
+</p>
+</div>
+</div>
+<div id="outline-container-org59223fc" class="outline-2">
+<h2 id="org59223fc">might go crazy if i don't do more 8-bit music but will be awhile for that, would love to get some hardware for music too</h2>
+<div class="outline-text-2" id="text-org59223fc">
+<p>
+speaks for itself. I don't know if this is going to be a reality anytime soon. Ambient tunes and stuff to relate to the game project seem more do-able.
+</p>
+</div>
+</div>
+<div id="outline-container-orgaa9cef0" class="outline-2">
+<h2 id="orgaa9cef0">real life and meditation are going great</h2>
+<div class="outline-text-2" id="text-orgaa9cef0">
+<p>
+I meditate when I can, which should really be everyday. It is a practice.
+</p>
+</div>
+</div>
+]]></content>
+</entry>
+<entry>
+  <id>https://unluckylisp.com/blog/reflection-4.org</id>
+  <title>My Brief Meditation at Temple</title>
+  <link href="https://unluckylisp.com/blog/posts/reflection-4.html"/>
+  <published>2026-01-30T22:27:52-05:00</published>
+  <updated>2026-01-30T22:27:52-05:00</updated>
+  <content type="html"><![CDATA[<p>
+Today, I meditated at a Buddhist temple. I was really in awe, and have a deep appreciation for Buddhism since my meditation practice is deeply rooted and originates in Buddhist practice. My initiation to true meditating, along with experiencing what consciousness really is, was with a friend at a tea shop many moons ago.
+</p>
+
+<p>
+In today's meditation, a lot of material goods I desire (electronics or entertainment goods) appeared. I let that pass. I was also kind of focused on the digital clock set to 24h time that was among the Buddha statues. I did not like it at first, but I can appreciate that I knew I was in a decent meditation for 20-25 minutes because of it (I left my phone in the car for reasons of not disturbing the temple, and to limit my distractions).
+</p>
+
+<p>
+I had to let go multiple times in this meditation, and I alternated between breathing and just sitting. I focused a lot on certain parts of the temple, statues, and the clock. I eventually was able to dive in and close my eyes once again. I think that I really was able to focus on desire, along with limiting my desire. I resisted buying some booster packs (Yu-gi-oh) at the store last few times, and my initial reasoning was anything but limiting desire. I was replacing desire with another desire. I will ask to (<i>as well as practice patience to</i>) focus on limiting my desire when going to stores in the future, rather than replacing desire with another.
+</p>
+
+<p>
+I got a lot out of that meditation. I truly connected with the desire of limiting desire, which is the only desire worth seeking in Buddhism (?) anyway I liked my time at the temple. I could have gone further into the meditation, and I appreciated the monk that was able to calmly remain in a seemingly blissful state of meditation. Duty calls, and I have a life on life's terms. So, it was time to head out when necessary. Gods willing, I can return to that temple and possibly work towards breathing back into nothingness again.
+</p>
+
+<p>
+Numbers that came to mind today: 3, 6, 9, 93, 777
+</p>
+
+<p>
+Rune: ᚢ - Uruz (definitely liked to be utilized today!)
+</p>
+]]></content>
+</entry>
+<entry>
+  <id>https://unluckylisp.com/blog/reflection-3.org</id>
+  <title>Untitled Thoughts Reflection</title>
+  <link href="https://unluckylisp.com/blog/posts/reflection-3.html"/>
+  <published>2026-01-22T00:59:31-05:00</published>
+  <updated>2026-01-22T00:59:31-05:00</updated>
+  <content type="html"><![CDATA[<p>
+Moments in time, reflection and meditation become really important in grounding myself as if I am a pillar. I see pillars or moments where objects around me are at rest. Forces that cancel and allow for objects to be still, grounded, put together, held together, or something of the like. I think of the pillars the hold me together, and I think that it is the spiritual connections and principles that keep me put together well. To have my mind in order is nice. However, think of this procedure: (1) my mind is in chaos, (2) I utilize awareness, and (3) I put my mind back in order. There is something really beautiful about awareness. It is only through a discipline and practice, daily and regularly, that I have awareness. I am not perfect, and I know that I will have my days. I am human, and I can't always have awareness. I think part of enlightenment is returning back to the state of enlightenment. Knowing that everything is temporary is part of enlightenment. So then, is enlightenment also temporary? I actually think so.
+</p>
+
+<p>
+I was wrong about some things. I do think that perhaps there is a purity in the sense that the mind can be clear, clean and calm. I think that purity is perhaps a state of return. Returning to clearness. Maybe purity is not the correct term.
+</p>
+
+<p>
+<span class="underline">Words of reflection</span>: Journey, Will (Self or God), Clearing, Field, Wealth
+</p>
+
+<p>
+<span class="underline">Rune</span>: ᚠ - Fehu
+</p>
+]]></content>
+</entry>
+<entry>
+  <id>https://unluckylisp.com/blog/reflection-2.org</id>
+  <title>Reflections during Yuletide</title>
+  <link href="https://unluckylisp.com/blog/posts/reflection-2.html"/>
+  <published>2025-12-25T10:51:28-05:00</published>
+  <updated>2025-12-25T10:51:28-05:00</updated>
+  <content type="html"><![CDATA[<p>
+One phrase that appears very often in my mind, as I sit or stand, watch and listen: <i>"A strong desire to know if the world has a will of its own, what would it then choose?"</i> It is my belief another way to express this plainly is: <i>"Letting go."</i> Is it then that desire can be purified by spiritual principles, or is it letting go of desire that we do through spiritual principles? Personally, I don't find it appealing to become pure or return to a state that seemingly never was the case. At what point, is the nature of any being or existence <i>"pure"</i>? (in terms outside of Science, or chemistry in particular, for which I am obviously not profoundly acquainted unless there are numbers involved)
+</p>
+
+<p>
+When the mind is not still enough to sit, listen, and watch for results, I found that walking this year was the most profound in calming the mind. I found each step to be meditative in itself. Walking until I have exhausted myself of the insane thoughts I have. Walking until I've stopped banging my head against the wall, while expecting myself not to bleed.
+</p>
+
+<p>
+A reflection after my first pipering in a long time: Is living as a NEET really practical compared to being incarcerated in the United States? NEETs struggle to afford a lot of basic needs and even fulfilling their desires with saving money. Incarcerated, in most states, have shelter and food, and are afforded the ability to purchase entertainment systems (TV and video game consoles, as some examples). It seems that there is a lack of logic, but the case in point: Keep the incarcerated comfortable in order to continue the revolving door. I would not encourage a NEET to become a prisoner, but if they do so: is it not logical to assume that they could adjust to such a lifestyle and in turn figure out that this satisfies their desires better (in many ways)?
+</p>
+
+<p>
+Prison life is very simple and easy, and merging into the culture doesn't take very long. It takes a lot of energy and time for me to make a living and a place out here, and to the point that I don't have a lot of time to enjoy myself or do a lot that I'd prefer to do. In prison, I worked, educated, read, and also had copious amounts of time to exercise, play sports, watch shows, play vidya, play Minis games (battle tech, warhammer), table top RPG, and other classic card and board games. (I even had time to make minis out of erasers, tylenol, paper; there was lots of time for creativity as well as entertainment.) I would still say my worst day out here is better than my best day in there.
+</p>
+
+<p>
+Knowing the motivation of people is an important trait and/or skill to have. I was pointed out that my true desire is to have freedom; not to be tied down to something. I lack care for what most people think. I think that freedom really is a fleeting concept though. Especially seeking out external freedom or some sort of social contract that adheres to your own comfortability in the names of <i>"freedom"</i>. Then what is freedom? Sometimes for me, when I admit or shout surrender. Admitting the lack of power and that I truly have zero control. These are, what I've found, to be more freeing than release from an institution or anything sort of external expression of <i>"liberty"</i>.
+</p>
+]]></content>
+</entry>
+<entry>
+  <id>https://unluckylisp.com/blog/pkmnromhacks1.org</id>
+  <title>Some of the Pokemon romhacks I enjoy, pt. 1</title>
+  <link href="https://unluckylisp.com/blog/posts/pkmnromhacks1.html"/>
+  <published>2025-12-17T08:43:01-05:00</published>
+  <updated>2025-12-17T08:43:01-05:00</updated>
+  <content type="html"><![CDATA[<p>
+I've been a fan of Pokemon since its inception, and I still enjoy the videos games a lot. The only thing is that the mainline series and other releases in recent years seem to be lacking compared to the older generations. Game Freak tends to take one step forward and two steps backward when they release a Pokemon game. These were already easy to play RPGs, but now they are just <i>streamlined</i> completely.
+</p>
+
+<p>
+Nonetheless, the remedy for fans that want a decent and balanced RPG out of Pokemon in 2025 is Romhacks (and also fan games)! I won't go into too much depth on these romhacks, as this is more to catalog or promote some of the romhacks I've been enjoying. I may or may not go extensively into reviewing specific romhacks in the future though.
+</p>
+
+<p>
+<b>Here are some of the Romhacks that have kept me satisfied as a Pokemon fan:</b>
+</p>
+<hr />
+<p>
+<b>Pokemon Crystal Legacy</b> - <a href="https://www.romhacking.net/hacks/8134/">https://www.romhacking.net/hacks/8134/</a>
+</p>
+
+<p>
+Pokemon Crystal is probably my favorite Pokemon title, and it just celebrated its 25th anniversary (released JP 14. December 2000). This romhack is faithful to the original Pokemon Crystal, with QoL updates (running shoes, for one), single-player-ified (trade mons have alternatives for evolution), and also overall balancing to make the experience more of a challenge (Kanto region trainers got tremendously boosted!).
+</p>
+
+<p>
+<i>Overall, I really enjoyed this romhack. This is definitely the way to play Pokemon Crystal in 2025.</i>
+</p>
+<hr />
+<p>
+<b>Pokemon Crystal Clear</b> - <a href="https://shockslayer.com/crystal-clear/">https://shockslayer.com/crystal-clear/</a>
+</p>
+
+<p>
+This is Pokemon Crystal if it was open-world/zone. You can choose from many different starters (I believe even import your own if you prefer), pick your region and town to start in, and also customize your avatar (you can even import your own). There is a lot of addition content, and this is regularly updated. It has QoL and the typical updates that allow for you to complete the dex without the need to trade with another gameboy.
+</p>
+
+<p>
+<i>If you love Pokemon Crystal, but want something different and new, then this is the one to play.</i>
+</p>
+<hr />
+<p>
+<b>Pokemon Run&amp;Bun (emerald hack)</b> - <a href="https://www.pokecommunity.com/threads/pok%C3%A9mon-run-bun-v1-07.493223/">https://www.pokecommunity.com/threads/pok%C3%A9mon-run-bun-v1-07.493223/</a>
+</p>
+
+<p>
+I play v1.07, and I believe this is regularly updated on their discord server. I don't care to update just yet because I'm still in the middle of a playthrough. This is basically Pokemon Emerald difficulty hack with Pokemon up to Gen VIII obtainable. (and of course, there is QoL) Every route is revamped with different mons to catch. Basically the point of this title is that you are "just another trainer" and each battle will present challenges. There is definitely a need to balance between grinding and strategizing. Later in the game, grinding alone will barely be enough, if at all.
+</p>
+
+<p>
+<i>If you like Pokemon META and want to play a title that gives you a fair challenge, then I recommend this one.</i>
+</p>
+<hr />
+<p>
+<b>BONUS - Poke Wilds</b> - <a href="https://www.pokewilds.com/">https://www.pokewilds.com/</a>
+</p>
+
+<p>
+<i>Not a romhack, but a fan game!</i> A game I play on my steam deck once and awhile is PokeWilds. It is basically minecraft meets pokemon. Generation II style/graphics.
+</p>
+
+<p>
+<i>For the creative/survival gamer that also likes RPGs.</i>
+</p>
+<hr />
+]]></content>
+</entry>
+<entry>
+  <id>https://unluckylisp.com/blog/my-emacs-config-2025.org</id>
+  <title>Akai&apos;s GNU Emacs Config</title>
+  <link href="https://unluckylisp.com/blog/posts/my-emacs-config-2025.html"/>
+  <published>2025-11-21T19:50:21-05:00</published>
+  <updated>2025-11-21T19:50:21-05:00</updated>
+  <content type="html"><![CDATA[<p>
+Upon request, I have made my emacs configuration files available.
+<a href="https://github.com/andrewmetzner/akai-emacs-config">https://github.com/andrewmetzner/akai-emacs-config</a>
+</p>
+
+<p>
+I am open to suggestions too. <a href="/contact/">Send me</a> your config if you prefer too.
+</p>
+]]></content>
+</entry>
+<entry>
+  <id>https://unluckylisp.com/blog/reflection-1.org</id>
+  <title>Reflection on digital era &amp; free software: Foucaultian-style discourse</title>
+  <link href="https://unluckylisp.com/blog/posts/reflection-1.html"/>
+  <published>2025-10-16T02:22:56-04:00</published>
+  <updated>2025-10-16T02:22:56-04:00</updated>
+  <content type="html"><![CDATA[<p>
+The contemporary subject, the world, the user, myself &#x2013; bound by the very technologies it seeks to escape &#x2013; finds itself caught in a paradox, perpetually spiraling within a system of control that it simultaneously seeks to resist. At the heart of this struggle lies a fundamental tension between autonomy and the inescapable nexus of data, surveillance, and the growing ubiquity of proprietary systems. The drive to reclaim privacy, to sever oneself from the web of digital control, becomes an act of subversion against a system that, nonetheless, persists in shaping every facet of existence. In this way, the pursuit of freedom through technological autonomy is inseparable from the mechanisms that bind us, such that any effort to transcend them is not only futile, but complicit in the very structures of power it seeks to disrupt.
+</p>
+
+<p>
+The discourse surrounding Free and Open Source Software emerges within this framework as an ideological struggle &#x2013; one that seeks to challenge the hegemony of proprietary software. It proclaims the autonomy of the user, advocating for transparency, for the user’s right to control their tools, their data, and their digital existence. Yet, as we attempt to align our practices with these values, we are confronted with a critical question: what does it mean to be free within a system that is, by its very nature, structured around the exchange of personal data?
+</p>
+
+<p>
+Indeed, the power structures inherent in data-driven technologies extend beyond the boundaries of any particular software or operating system. The very act of opting out &#x2013; the rejection of proprietary systems &#x2013; places the individual in a position of resistance, but also complicates this resistance. It is, in fact, the individual’s participation in the economy of digital data that establishes them as a subject, for to abstain entirely is not a mere act of choice, but a refusal of the socio-technological systems that govern everyday life. Thus, even the rejection of proprietary systems requires an engagement with the very mechanisms of power that we aim to critique. The struggle for privacy, then, becomes a negotiation within an ecosystem that forces the individual into an interminable cycle of adaptation.
+</p>
+
+<p>
+It is crucial to understand that the resistance to big tech and proprietary software cannot be disentangled from the fundamental structures of control that govern the modern condition. The notion that individual efforts &#x2013; be they personal or political &#x2013; might alter the direction of technological development overlooks the historical reality of the digital economy: it is not simply a question of technological advancement, but of a deeply embedded system of power. The very technologies that enable our resistance are those that perpetuate the conditions of their own existence. We cannot simply remove ourselves from this system, as it is woven into the fabric of contemporary life.
+</p>
+
+<p>
+In this light, the embrace of FOSS, or any attempt to disengage from big tech, must be viewed as an intervention within a larger matrix of power relations. To choose a moral standpoint, to live in opposition to the prevailing digital structures, is to simultaneously become an agent of that system. The tools of resistance &#x2013; whether it is the act of using open-source software or the adoption of alternative communication channels &#x2013; are no less implicated in the system of control.
+</p>
+
+<p>
+The very decision to engage in activism, to make lifestyle choices rooted in moral imperatives, encourages contradiction. The claim to live ethically in a digital age is itself a construction &#x2013; one that is always already framed by the systems of power it seeks to critique. To live within these systems, to participate in them, is to acknowledge the impossibility of fully escaping them. And yet, to choose to abstain, to reject these systems entirely, is not an act of purity, but a withdrawal into an idealized space that is equally constructed.
+</p>
+
+<p>
+Thus, the challenge posed by our contemporary condition is not one of resistance alone. It is not simply a matter of choosing between digital freedom and digital servitude. The real question is what kind of subject is produced through the act of resistance, and whether this resistance &#x2013; no matter how well-intentioned &#x2013; might not merely reproduce the very conditions of digital serfdom it seeks to overthrow. The individual is perpetually trapped in this dialectic: to resist is to engage, to engage is to become part of the very systems one seeks to escape.
+</p>
+
+<p>
+This ceaseless engagement (or circularity) with the structures of power, reveals the limits of individual autonomy in the digital age. In striving for privacy, for freedom from surveillance, we are not simply reclaiming agency; we are negotiating with a system of power that has already shaped us in its image. The question, then, is not whether the system can be changed, but whether our very efforts to change it are themselves part of the system. In the end, the human experience &#x2013; messy, imperfect, and constrained by external forces &#x2013; remains the last bastion of freedom, though even this is subject to the unseen currents of power that shape our desires and actions.
+</p>
+
+<p>
+A discourse inspired by Foucault's:
+I. Discipline and Punish (1975) &#x2013; <i>highly recommended</i>
+&amp;&amp; II. The History of Sexuality, Volume I (1976)
+</p>
+]]></content>
+</entry>
+<entry>
+  <id>https://unluckylisp.com/blog/fitness-and-creatine.org</id>
+  <title>Fitness and Creatine / supplement intake</title>
+  <link href="https://unluckylisp.com/blog/posts/fitness-and-creatine.html"/>
+  <published>2025-10-16T02:17:47-04:00</published>
+  <updated>2025-10-16T02:17:47-04:00</updated>
+  <content type="html"><![CDATA[<p>
+I don't really like to take creatine, for a few reasons. I don't really prefer extra water weight as I prefer to make weight and remain lighter. I do think it can be constructive to use when strengh-training primarily, which is the regimen I've been primarily on now due to restrictions in time and lifestyle.
+</p>
+
+<p>
+I recommend creatine monohydrate micronised, and I don't do more than 60-70 days for a cycle. I found that 90 days is redundant for my body-type (ectomorph). Everyone is different though, and goals with fitness may impact how we have to diet and cycle. I know some that cycle creatine for most of the year, taking possibly a month off.
+</p>
+
+<p>
+For supplements in recent times, I've mostly been using (aside from protein) a decent pre-workout formula that includes creatine. The supplement includes: 333 mg Vitamin C, 40 mg Vitamin B3, 667 mcg Vitamin B6, 333 mcg Folic Acid (Folate), 47 mcg Vitamin B12, 27 mg Calcium, 2 g Beta-Alanine, Creatine Monohydrate 1 g, 1 g L-Arginine, 200 mg Natural Caffeine Anhydrous.
+</p>
+
+<p>
+Essentially, this is like drinking a sports-style energy drink except with creatine in it. Creatine does help me through workouts when I do not desire to do them. The change of seasons and circumstances of life have made it difficult to stay focused, so I am thankful to have pre-workout with creatine. I do not do any more than 30-40 day cycles with this pre-workout, however. I don't like having too much dependence on caffeine after all. I found creatine by itself to be more than enough for pre-workout, however at the moment I do need an extra push and I found that in this pre-workout formula.
+</p>
+]]></content>
+</entry>
+<entry>
+  <id>https://unluckylisp.com/blog/persona5royal.org</id>
+  <title>Persona 5 Royal (game review)</title>
+  <link href="https://unluckylisp.com/blog/posts/persona5royal.html"/>
+  <published>2025-09-01T21:48:19-04:00</published>
+  <updated>2025-09-01T21:48:19-04:00</updated>
+  <content type="html"><![CDATA[<p>
+<span class="underline">Positives</span>:
+</p>
+<ul class="org-ul">
+<li>Great JRPG dungeon-crawler and life-simulator game (one of the best of the genre)</li>
+<li>Entertaining and stylish story narrative</li>
+<li>Definitive edition of Persona 5</li>
+<li>Contains a lot of QoL updates</li>
+<li>More content</li>
+<li>New "true" ending and 3rd semester story</li>
+<li>Great dungeon-crawling</li>
+<li>Awesome mechanics and features (very SMT-like)</li>
+<li>Better utilization of the whole party/cast compared to previous installments</li>
+</ul>
+
+<p>
+<span class="underline">Neutral</span>:
+</p>
+<ul class="org-ul">
+<li>100+ hours is generally the amount it takes to complete one playthrough</li>
+<li>One of the more easily accessible titles of Persona (stream-lined)</li>
+</ul>
+
+<p>
+<span class="underline">Negatives</span>:
+</p>
+<ul class="org-ul">
+<li>Easy min-maxing</li>
+<li>Sometimes falls guilty to "illusion of choice"</li>
+<li>Dungeons were very easy for me to prepare for</li>
+<li>Still not the best Persona or SMT title</li>
+</ul>
+
+<hr />
+
+<p>
+I really love the SMT/Persona games. This is great way for players to re-explore Persona 5, and I think it is a good introductory title to Persona for the newcomer. I don't exactly think that this title challenged me as much as other installments of SMT/Persona or other JRPGs. I don't really recall any dungeon being too difficult to prepare for. After the first dungeon, it is really easy to min-max and complete dungeons in one in-game day. There's lots of options as well as perks that make my life easier. Building bonds with confidants really helps, and it is easier to manage between different party members. This title encourages you to really use every party member, and there are ways to get the most out of all of them. There still is META involved, but I had a blast changing up the party often as well as switching in the middle of battles. There were a few optional bosses that gave me a decent enough challenge, where having social links maxed out was really what saved me. (good dungeoneering that is dependent on careful decisions and maxing in simulator part of game)
+</p>
+
+<p>
+As someone who previously played Persona 5, it was easy for me to play this game blind and figure out how to get the "true" ending. New Game+ has lots of cool content within it, and helps players get the "true" ending if they didn't get it on their first playthrough. That being said, it is a large climb just to get to the end of the game. (at least 100 hours) That can be good or bad for players. For me, I like the length of play, however it makes me really question when I'm going to revisit this game and do a NG+ run.
+</p>
+
+<p>
+Persona 5 Royal is a great installment in the franchise. It is stylish and has lots of modern elements, as well as infuses SMT mechanics and has an amazing dungeon-crawling experience. For me, JRPGs, as well as most games, are all about finding the min-maxing. This game was very error-free and easy to min-max, so that makes it less exciting. The story and the stylish, entertaining narrative kept me going though. Like any Persona game, there is a great story and great concept here. I still think that Persona 4 Golden is the best, and that the characters and story have the most depth and made a lasting impression on me. Persona 5 Royal is not the best Persona game, but it is a great Persona game.
+</p>
+]]></content>
+</entry>
+<entry>
+  <id>https://unluckylisp.com/blog/gtd-with-org-mode-and-more.org</id>
+  <title>GTD with Org Mode (and more!)</title>
+  <link href="https://unluckylisp.com/blog/posts/gtd-with-org-mode-and-more.html"/>
+  <published>2025-08-19T17:35:00-04:00</published>
+  <updated>2025-08-19T17:35:00-04:00</updated>
+  <content type="html"><![CDATA[<p>Part of my summer has been transferring and collecting all of my data onto GNU Emacs, for a multitude of reasons and purposes. One very important part of this wonderful program that I maximized use of is Org mode. I was using Org mode for awhile, to format documents and export to other formats. Using it as a note taker was another great use. What I underestimated was org-agenda and the ability to do Emacs calendar to a whole new level. Not only was I able to get an amazing scheduling tool, but this tool is so intuitive and in line with book <i>Getting Things Done</i> (GTD for short) by David Allen. GTD time management and workflows emphasize breaking down tasks, sequencing, organizing, as a means to, well, Get Things Done! It is amazing how compatible and well-built org-agenda is for this resolution of time management. I definitely recommend the read of this book as well as watching videos that may break it down even further.</p>
+<p>GTD has been tremendously helpful in not replacing my habits or other time management methods, but rather it does so much to expand on it. I actually found that GTD was very intuitive and easy to get into. The book emphasizes comfortable work environments to maximize workflow. Org mode is, in my experience, the workflow that emulates GTD. There are a lot of agenda and calendar programs out there, but this beautiful program maximizes time management and allows me to actually accomplish tasks.</p>
+<p>Using Org to creater headlines and many levels, as well as using [/] and [%] to track progress, makes scheduling and task/time management like I am managing a quest/side-quest menu in a video game. It is actually fun for me. There is a sense of celebration of accomplishment in Org mode. There is also a lack of overwhelming energy in adding TODO's, as I am organized in addition of tasks as well as managing ongoing and rainyday/wishful thinking tasks. For once, I can say that agenda-ing has become fun. Not just life-hack-fun, but genuine fun. Below is a short snippet of my configuration using org-agenda. All of my agenda org files are in ~/org and I have several files in this, which org-agenda makes it a breeze to keep track of.</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><span style="color: #99968b;">;; </span><span style="color: #99968b;">A basic configuration for Agenda
+</span>(<span style="color: #8ac6f2; font-weight: bold;">require</span> '<span style="color: #e5786d;">org</span>)
+
+(add-hook 'org-mode-hook #'visual-line-mode)
+(<span style="color: #8ac6f2; font-weight: bold;">setq</span>
+ org-directory <span style="color: #95e454;">"~/org/"</span>
+ org-agenda-files (list org-directory)
+ org-tags-column -60
+
+ <span style="color: #99968b;">;; </span><span style="color: #99968b;">TODO keywords and log settings
+</span> org-todo-keywords '((sequence <span style="color: #95e454;">"TODO(t)"</span> <span style="color: #95e454;">"WAIT(w!)"</span> <span style="color: #95e454;">"|"</span> <span style="color: #95e454;">"CANCEL(c!)"</span> <span style="color: #95e454;">"DONE(d!)"</span>))
+ org-log-done 'time
+ org-log-into-drawer t
+ org-insert-heading-respect-content t
+ org-M-RET-may-split-line '((default . nil))
+
+ <span style="color: #99968b;">;; </span><span style="color: #99968b;">Calendar mark settings
+</span> org-hide-emphasis-markers nil
+ calendar-mark-holidays-flag t)
+
+<span style="color: #99968b;">;; </span><span style="color: #99968b;">Keybindings for Org
+</span>(global-set-key (kbd <span style="color: #95e454;">"C-c l"</span>) #'org-store-link)
+(global-set-key (kbd <span style="color: #95e454;">"C-c a"</span>) #'org-agenda)
+(global-set-key (kbd <span style="color: #95e454;">"C-c c"</span>) #'org-capture)
+</pre>
+</div>
+
+<p>Another form of time management that I utilize is the pomodoro technique as well as block scheduling. Pomodoro and Block scheduling are made a lot easier because of Org mode. GTD helps me figure out which methods are most applicable for different projects. Pomodoro has been helpful for working on ongoing tasks, like studying or work-related tasks that have no real true end. Block scheduling has been helpful in mapping out very busy days, where there are a lot of places to be and no real room for time to spare. Block scheduling is made easy with org-agenda's formats. I use org-pomodoro on Emacs as my primary means for pomodoro timing. It is very useful as I can use my agenda files and also clock in how much time I spent on them. This is a very healthy way to task, as it encourages breaks and rewards yet also keeps your mind from wandering elsewhere. I have forked the org-pomodoro code to update it, as well as add more features to make this timer more integral with tracking with the quality features and also in principle to GTD.</p>
+<p>This post was a mere reflection and promotion of Emacs and Org mode helping me get things done. The real heroes are elsewhere. Here are some resources to help, if you are interested in further reading.</p>
+<ul class="org-ul">
+<li>Getting Things Done<br />
+<a href="https://gettingthingsdone.com/">https://gettingthingsdone.com/</a><br /></li>
+<li>The Pomodoro Technique<br />
+<a href="https://www.todoist.com/productivity-methods/pomodoro-technique">https://www.todoist.com/productivity-methods/pomodoro-technique</a><br /></li>
+<li>Org mode for GTD and other Task management systems<br />
+<a href="https://orgmode.org/worg/org-gtd-etc.html">https://orgmode.org/worg/org-gtd-etc.html</a><br /></li>
+<li>Getting Things Done with Emacs<br />
+<a href="https://lucidmanager.org/productivity/getting-things-done-with-emacs/">https://lucidmanager.org/productivity/getting-things-done-with-emacs/</a><br /></li>
+<li>Org mode manual<br />
+<a href="https://www.gnu.org/software/emacs/manual/html_mono/org.html">https://www.gnu.org/software/emacs/manual/html_mono/org.html</a><br /></li>
+<li>Org Agenda commands<br />
+<a href="https://orgmode.org/manual/Agenda-Commands.html">https://orgmode.org/manual/Agenda-Commands.html</a><br /></li>
+<li>My fork of org-pomodoro<br />
+<a href="https://github.com/luckless-wizard/org-pomodoro">https://github.com/luckless-wizard/org-pomodoro</a><br /></li>
+<li>Org-pomodoro<br />
+<a href="https://github.com/marcinkoziej/org-pomodoro">https://github.com/marcinkoziej/org-pomodoro</a><br /></li>
+</ul>
+]]></content>
+</entry>
+<entry>
+  <id>https://unluckylisp.com/blog/hello.org</id>
+  <title>Hello!</title>
+  <link href="https://unluckylisp.com/blog/posts/hello.html"/>
+  <published>2025-08-11T10:20:00-04:00</published>
+  <updated>2025-08-11T10:20:00-04:00</updated>
+  <content type="html"><![CDATA[<p>
+Hello! This is a new beginning for a new blog. I have tags available for greater organization. I will cover a great range of topics, and so I hope this blog is easy to navigate overall. I prefer simple web design, and I prefer that this blog is mostly text. Anything else would just negate the purpose of journaling. Please follow the feed!
+</p>
+]]></content>
+</entry>
+</feed>

@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="https://unluckylisp.com/favicon.png">
+<link rel="alternate" type="application/atom+xml" href="/blog/index.atom" title="wizard book (atom)">
+<meta name="fediverse:creator" content="@wizardbook@mastodon.social">
+<link rel="me" href="https://mastodon.social/@wizardbook" />
+<meta property="og:title" content="unluckylisp">
+<meta property="og:description" content="A site about wizards and programming.">
+<meta property="og:url" content="https://unluckylisp.com/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="unluckylisp">
+<meta name="twitter:description" content="A site about wizards and programming.">
+<title>fractal-generator</title>
+<style>
+  body, html {
+    margin: 0; padding: 0; height: 100vh;
+    background: black; color: white; font-family: monospace;
+    display: flex;
+  }
+  #ui {
+    width: 250px;
+    background: rgba(0,0,0,0.85);
+    padding: 12px;
+    box-sizing: border-box;
+    user-select: none;
+  }
+  #ui label, #ui input, #ui select, #ui button {
+    display: block;
+    margin: 8px 0;
+  }
+  #canvas-container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+  }
+  canvas {
+    background: black;
+    image-rendering: pixelated;
+    border: 1px solid #444;
+  }
+  .input-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .input-row input[type=number] {
+    width: 40px;
+    background: #111;
+    border: 1px solid #555;
+    border-radius: 4px;
+    color: white;
+    font-size: 0.9em;
+    padding: 3px 6px;
+    -moz-appearance: textfield;
+  }
+  .input-row input[type=number]::-webkit-inner-spin-button,
+  .input-row input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type=range] {
+    -webkit-appearance: none;
+    width: 150px;
+    height: 6px;
+    background: #222;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  input[type=range]:focus {
+    outline: none;
+  }
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    background: #3399ff;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 1px solid #0077ff;
+    margin-top: -6px;
+    transition: background 0.3s ease;
+  }
+  input[type=range]::-webkit-slider-thumb:hover {
+    background: #66bbff;
+  }
+  input[type=range]::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    background: #3399ff;
+    border-radius: 50%;
+    border: 1px solid #0077ff;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  input[type=range]::-moz-range-thumb:hover {
+    background: #66bbff;
+  }
+  button {
+    background: #3399ff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+  }
+  button:disabled {
+    background: #555;
+    cursor: not-allowed;
+  }
+  button:hover:not(:disabled) {
+    background: #66bbff;
+  }
+  #log {
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #ccc;
+    white-space: pre-wrap;
+    height: 120px;
+    overflow-y: auto;
+    background: #111;
+    padding: 8px;
+    border-radius: 4px;
+  }
+</style>
+</head>
+<body>
+
+<div id="ui">
+  <label>
+    Fractal Type:
+    <select id="fractalType" autocomplete="off">
+      <option value="mandelbrot">Mandelbrot</option>
+      <option value="julia">Julia</option>
+    </select>
+  </label>
+
+  <div id="juliaControls" style="display:none;">
+    <label>
+      Julia c (real):
+      <div class="input-row">
+        <input type="range" id="juliaRealSlider" min="-1" max="1" step="0.001" value="0.355" />
+        <input type="number" id="juliaReal" min="-1" max="1" step="0.001" value="0.355" />
+      </div>
+    </label>
+    <label>
+      Julia c (imag):
+      <div class="input-row">
+        <input type="range" id="juliaImagSlider" min="-1" max="1" step="0.001" value="0.355" />
+        <input type="number" id="juliaImag" min="-1" max="1" step="0.001" value="0.355" />
+      </div>
+    </label>
+  </div>
+
+  <label>
+    Mirror horizontally:
+    <input type="checkbox" id="mirrorH" checked />
+  </label>
+  <label>
+    Mirror vertically:
+    <input type="checkbox" id="mirrorV" checked />
+  </label>
+
+  <label>
+    Speed:
+    <div class="input-row">
+      <!-- max now 120 -->
+      <input type="range" id="fpsSlider" min="1" max="30" step="1" value="60" />
+      <input type="number" id="fpsInput" min="1" max="30" step="1" value="60" />
+    </div>
+  </label>
+
+  <div id="log"></div>
+</div>
+
+<div id="canvas-container">
+  <canvas id="canvas" width="550" height="550"></canvas>
+</div>
+
+<script>
+(() => {
+  const c = document.getElementById('canvas');
+  const ctx = c.getContext('2d');
+  const W = c.width, H = c.height, maxIter = 80;
+
+  const typeSel = document.getElementById('fractalType');
+  const juliaCtr = document.getElementById('juliaControls');
+  const jrS = document.getElementById('juliaRealSlider');
+  const jrI = document.getElementById('juliaReal');
+  const jiS = document.getElementById('juliaImagSlider');
+  const jiI = document.getElementById('juliaImag');
+  const mH = document.getElementById('mirrorH');
+  const mV = document.getElementById('mirrorV');
+  const speedS = document.getElementById('fpsSlider');
+  const speedI = document.getElementById('fpsInput');
+
+  // show/hide julia inputs
+  typeSel.addEventListener('change',_=> {
+    juliaCtr.style.display = typeSel.value==='julia'?'block':'none';
+  });
+
+  // sync julia real
+  function syncJR(v){
+    const val = Math.min(1,Math.max(-1,parseFloat(v)||0));
+    jrS.value = val; jrI.value = val.toFixed(3);
+  }
+  jrS.oninput = e=>syncJR(e.target.value);
+  jrI.oninput = e=>syncJR(e.target.value);
+
+  // sync julia imag
+  function syncJI(v){
+    const val = Math.min(1,Math.max(-1,parseFloat(v)||0));
+    jiS.value = val; jiI.value = val.toFixed(3);
+  }
+  jiS.oninput = e=>syncJI(e.target.value);
+  jiI.oninput = e=>syncJI(e.target.value);
+
+  // sync speed (1–30) & reset timer
+  let lastTime=0, animId=0;
+  function syncSp(v){
+    const val = Math.min(30,Math.max(1,parseInt(v)||60));
+    speedS.value = val; speedI.value = val;
+    lastTime = 0;
+  }
+  speedS.oninput = e=>syncSp(e.target.value);
+  speedI.oninput = e=>syncSp(e.target.value);
+
+  // init
+  syncJR(jrS.value);
+  syncJI(jiS.value);
+  syncSp(speedS.value);
+
+  // HSL→RGB
+  function hsl2rgb(h,s,l){
+    let r,g,b;
+    if(!s) r=g=b=l;
+    else {
+      const hue2rgb=(p,q,t)=>{
+        if(t<0)t+=1;
+        if(t>1)t-=1;
+        if(t<1/6)return p+(q-p)*6*t;
+        if(t<1/2)return q;
+        if(t<2/3)return p+(q-p)*(2/3-t)*6;
+        return p;
+      };
+      const q = l<0.5?l*(1+s):l+s-l*s;
+      const p = 2*l-q;
+      r = hue2rgb(p,q,h+1/3);
+      g = hue2rgb(p,q,h);
+      b = hue2rgb(p,q,h-1/3);
+    }
+    return [~~(r*255),~~(g*255),~~(b*255)];
+  }
+
+  // mandelbrot/julia
+  function mand(cx,cy){
+    let x=0,y=0,i=0;
+    while(x*x+y*y<=4 && i<maxIter){
+      const x2 = x*x - y*y + cx;
+      y = 2*x*y+cy;
+      x = x2;
+      i++;
+    }
+    return i;
+  }
+  function jul(x,y,cx,cy){
+    let i=0;
+    while(x*x+y*y<=4 && i<maxIter){
+      const nx = x*x - y*y + cx;
+      y = 2*x*y+cy;
+      x = nx;
+      i++;
+    }
+    return i;
+  }
+
+  // draw
+  function draw(t){
+    const img = ctx.createImageData(W,H);
+    const d = img.data;
+    const zoom = 300 + Math.sin(t*0.0006)*150;
+    const ox = -0.7 + Math.cos(t*0.0003)*0.4;
+    const oy = Math.sin(t*0.0004)*0.4;
+    const amp = 20+10*Math.sin(t*0.0009);
+    const cr = parseFloat(jrI.value), ci = parseFloat(jiI.value);
+
+    for(let py=0;py<H;py++){
+      for(let px=0;px<W;px++){
+        let mx=px, my=py;
+        if(mH.checked && mx>W/2) mx = W-mx;
+        if(mV.checked && my>H/2) my = H-my;
+        const wx = mx + Math.sin(my*0.02 + t*0.002)*amp;
+        const wy = my + Math.cos(mx*0.02 + t*0.002)*amp;
+        const cxp = (wx-W/2)/zoom - ox;
+        const cyp = (wy-H/2)/zoom - oy;
+
+        const it = typeSel.value==='mandelbrot'
+          ? mand(cxp,cyp)
+          : jul(cxp,cyp,cr,ci);
+
+        const hue = (it*7 + t*0.03)%360;
+        const [r,g,b] = hsl2rgb(hue/360,1,0.5);
+        const idx = 4*(px+py*W);
+        d[idx]=r; d[idx+1]=g; d[idx+2]=b; d[idx+3]=255;
+      }
+    }
+    ctx.putImageData(img,0,0);
+  }
+
+  // animate at capped 120
+  function animate(ts=0){
+    if(!lastTime) lastTime = ts;
+    const sp = Math.min(120, Math.max(1, parseInt(speedI.value) || 60));
+    const iv = 1000 / sp;
+    if (ts - lastTime >= iv) {
+      draw(ts);
+      lastTime = ts;
+    }
+    animId = requestAnimationFrame(animate);
+  }
+
+  animate(); // Start animation
+})();
+
+</script>
+
+</body>
+</html>

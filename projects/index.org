@@ -1,0 +1,107 @@
+#+OPTIONS: toc:nil num:nil author:nil creator:nil title:nil
+
+#+LANGUAGE: en
+#+HTML_HEAD: <meta charset="utf-8">
+#+HTML_HEAD: <meta name="viewport" content="width=device-width, initial-scale=1">
+#+HTML_HEAD: <link rel="stylesheet" href="/css/style.css">
+#+HTML_HEAD: <link rel="icon" type="image/png" href="https://unluckylisp.com/favicon.png">
+#+HTML_HEAD: <link rel="alternate" type="application/atom+xml" href="/blog/index.atom" title="wizard book (atom)">
+#+HTML_HEAD: <meta name="fediverse:creator" content="@wizardbook@mastodon.social">
+#+HTML_HEAD: <link rel="me" href="https://mastodon.social/@wizardbook" />
+#+HTML_HEAD: <meta property="og:title" content="unluckylisp">
+#+HTML_HEAD: <meta property="og:description" content="A site about wizards and programming.">
+#+HTML_HEAD: <meta property="og:url" content="https://unluckylisp.com/">
+#+HTML_HEAD: <meta property="og:type" content="website">
+#+HTML_HEAD: <meta name="twitter:card" content="summary">
+#+HTML_HEAD: <meta name="twitter:title" content="unluckylisp">
+#+HTML_HEAD: <meta name="twitter:description" content="A site about wizards and programming.">
+
+#+TITLE: projects
+
+#+BEGIN_EXPORT html
+<div class="pixel-frame">
+<header class="main-header">
+  <a href="/" class="header-logo"></a>
+</header>
+<h2>projects</h2>
+
+<div class="outline-text-2">
+Please refer to my <a href="https://github.com/andrewmetzner">github page</a> primarily for Projects.<br><br>
+
+This page displays some of the relevant, ongoing work/programming projects I have made. The code is free and open-source, and all available on github. I do not license any of my code. I would love any pointers or to see someone successfully build something greater than what I can provide here.</div>
+#+END_EXPORT
+
+#+TOC: headlines 3 local
+
+* Graphics
+
+** fractal-generator
+ :PROPERTIES:
+ :CUSTOM_ID: fractal-generator
+ :END:
+ 
+#+BEGIN_EXPORT html
+<a href="https://github.com/andrewmetzner/fractal-generator">fractal-generator</a> is written in Javascript. This utilizes mandelbrot and julia sets to create appealing kaleidoscope animations. A simplified version is hosted <a href="/projects/fractal-generator/">here</a>. You can export gif of your fractals if you run the repository version.
+#+END_EXPORT
+
+
+** rgb bit bot
+ :PROPERTIES:
+ :CUSTOM_ID: rgb bit bot
+ :END:
+#+BEGIN_EXPORT html
+<a href="https://github.com/andrewmetzner/rgbbitbot">rgbbitbot</a>, written in Java, procedurally generates RGB new-bit style art. This is a port from a ruby program called <a href="https://gitlab.com/suetanvil/bitart">bitartbot</a>.
+#+END_EXPORT
+
+* Emacs
+ :PROPERTIES:
+ :CUSTOM_ID: emacs
+ :END:
+
+** ganzu-gikoru
+ :PROPERTIES:
+ :CUSTOM_ID: ganzu-gikoru
+ :END:
+
+#+BEGIN_EXPORT html
+<a href="https://github.com/andrewmetzner/ganzu-gikoru">ganzu-gikoru</a> is a simple static blog generator, written in Emacs Lisp. I was inspired by different software, like the <a href="https://gohugo.io/">Hugo software</a>, to write my own blog generator. I found good results from making my own blogging software, as certain aspects are mutable. Most blog software just gives user styling freedoms, and certain aspects of the generator are just part of the nature. I strive to continue to develop ganzu-gikoru to be more and more mutable, so that GNU Emacs users can add functions as well as modify existing variables and functions to their liking.
+#+END_EXPORT
+ 
+** org-pomodoro
+ :PROPERTIES:
+ :CUSTOM_ID: org-pomodoro
+ :END:
+
+#+BEGIN_EXPORT html
+<a href="https://github.com/andrewmetzner/org-pomodoro">org-pomodoro</a> is a fork of the package org-pomodoro on GNU Emacs MELPA. The original repository is <a href="https://github.com/marcinkoziej/org-pomodoro">here</a>. The reason I forked this code is that it has not been updated in some time. There was a lack of support for sounds through WSL, and I added that as I was in need of a pomodoro timer in GNU Emacs when I was using powershell.exe (Debian WSL) and emacs -nw on subsystem. There are also some nice features such as the ability to pause the timer. I added a constant timer, so you do not need to call for org-pomodoro to start the timer again, if you prefer to enable that variable. As the need arises, I will update this.
+#+END_EXPORT
+
+* Games
+ :PROPERTIES:
+ :CUSTOM_ID: games
+ :END:
+
+** Rogue re-creation
+ :PROPERTIES:
+ :CUSTOM_ID: rogue
+ :END:
+
+#+BEGIN_EXPORT html
+A recreation of rogue ASCII dungeon crawler.<br>
+<a href="https://unluckylisp.com/games/rogue">play now</a><br>
+<a href="https://github.com/andrewmetzner/rogue-akai-edition">project repo here</a>
+#+END_EXPORT
+ 
+* Leisure
+ :PROPERTIES:
+ :CUSTOM_ID: games
+ :END:
+ 
+** serebii-feed (scraper)
+ :PROPERTIES:
+ :CUSTOM_ID: serebii-feed
+ :END:
+
+#+BEGIN_EXPORT html
+serebii.net is a good resource for pokemon news, but they do not offer an rss feed. You can run <a href="https://github.com/andrewmetzner/serebii-feed">this script</a> yourself or you can get <a href="https://unluckylisp.com/projects/serebii/serebii.xml">the feed</a> hosted here.
+#+END_EXPORT

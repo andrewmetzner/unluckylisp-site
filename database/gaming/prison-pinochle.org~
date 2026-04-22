@@ -1,0 +1,120 @@
+#+OPTIONS: toc:nil num:nil author:nil creator:nil title:nil
+
+#+LANGUAGE: en
+#+HTML_HEAD: <meta charset="utf-8">
+#+HTML_HEAD: <meta name="viewport" content="width=device-width, initial-scale=1">
+#+HTML_HEAD: <link rel="stylesheet" href="/css/style.css">
+#+HTML_HEAD: <link rel="icon" type="image/png" href="https://unluckylisp.com/favicon.png">
+#+HTML_HEAD: <link rel="alternate" type="application/atom+xml" href="/blog/index.atom" title="wizard book (atom)">
+#+HTML_HEAD: <meta name="fediverse:creator" content="@wizardbook@mastodon.social">
+#+HTML_HEAD: <link rel="me" href="https://mastodon.social/@wizardbook" />
+#+HTML_HEAD: <meta property="og:title" content="unluckylisp">
+#+HTML_HEAD: <meta property="og:description" content="A site about wizards and programming.">
+#+HTML_HEAD: <meta property="og:url" content="https://unluckylisp.com/">
+#+HTML_HEAD: <meta property="og:type" content="website">
+#+HTML_HEAD: <meta name="twitter:card" content="summary">
+#+HTML_HEAD: <meta name="twitter:title" content="unluckylisp">
+#+HTML_HEAD: <meta name="twitter:description" content="A site about wizards and programming.">
+
+#+TITLE: Gaming: Prison Pinochle [Akai's Database]
+
+#+BEGIN_EXPORT html
+<div class="pixel-frame">
+<header class="main-header">
+<a href="/"><img src="/image/lambdae.png"></a>
+
+<small>[<a href="/database/">Akai's Database</a>]</small> > [<small><a href="/database/gaming/">Gaming home</a></small>]
+<h2>Prison Pinochle</h2>
+
+#+END_EXPORT
+
+#+TOC: headlines 3 local
+
+* Overview
+ :PROPERTIES:
+ :CUSTOM_ID: Overview
+ :END:
+/This is not a guide on the fundamentals of Pinochle, but more of a resource for how Prison Pinochle is structured and calculated/
+
+Prison Pinochle is a strong-hand variant of double-deck Pinochle (80 cards, shave all 9s). 
+- Minimum bid: 60 [sometimes this minimum is set to 65]
+- Deck: 80 cards [each rank appears 16 times // 4 of each card per suit]
+- Emphasis on strong hands; weak hands rarely make the bid
+- 3-4 players recommended
+- 3 player: Each player is dealt 25 cards, 5 cards remain as kitty for highest bidder
+  (there can be 4 players, where dealer sits out, this is a more skill-based and preferred version of pinochle, with competitive gambling involved)
+- 4 player: "Partners pinochle", each player dealt 20 cards
+  (I prefer this version so all players can play, and it is also more lightweight and fun. Gambling is possible, but there is a certain amount of luck to the deal added in a partners pinochle game)
+
+* Tricks
+:PROPERTIES:
+ :CUSTOM_ID: Tricks
+ :END:
+
+Each card has a simplified point value for tricks:
+
+- Ace (A): 3 points
+- Ten (10): 2 points
+- King (K): 1 point
+- Queen (Q): 0 points
+- Jack (J): 0 points
+- Last trick bonus: 1 point
+
+**Total tricks:** 97
+
+* Meld
+:PROPERTIES:
+ :CUSTOM_ID: Meld
+ :END:
+
+Meld scores are simplified to emphasize strong hands.
+Some usually include the marriage in trump as part of the points from the run.
+
+Note: 1 ≤ any integer N ≤ 4
+  
+**Runs**
+- Run in trump (A-10-K-Q-J): 15 points
+- Double run: 150 points
+- Triple run: 300 points
+- All trump wins automatically
+
+**Marriages**
+- Marriage in trump: N * 4 points
+- Marriage off-suit: N * 2 points
+
+**Pinochle** (Q♠ + J♦)
+- N * 4 points
+
+**Aces Around**
+- N * 10 points
+
+**Kings Around**
+- N * 8 points
+
+**Queens Around**
+- N * 6 points
+
+**Jacks Around**
+- N * 4 points
+
+* Bidding Guidelines
+:PROPERTIES:
+ :CUSTOM_ID: Bidding
+ :END:
+
+- Only strong hands should bid.
+- Typical strong-hand requirements:
+  - Trick points: 25–40 expected
+  - Meld: 20+ points
+- Weak or average hands typically cannot safely make the minimum bid of 60.
+
+* Strategy Notes
+:PROPERTIES:
+ :CUSTOM_ID: Notes
+ :END:
+
+- Control of trump is crucial for winning tricks.
+- Meld combos, especially runs and aces around, are critical for reaching minimum bid.
+- Passing with weak hands is recommended.
+- Soft sets and hard sets are usually part of the process, where most hands rarely get played.
+- Bidding for the kitty is something that is possible, but this version of pinochle encourages shrewd tactics.

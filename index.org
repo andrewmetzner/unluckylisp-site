@@ -1,0 +1,83 @@
+#+OPTIONS: toc:nil num:nil author:nil creator:nil title:nil
+
+#+LANGUAGE: en
+#+HTML_HEAD: <meta charset="utf-8">
+#+HTML_HEAD: <meta name="viewport" content="width=device-width, initial-scale=1">
+#+HTML_HEAD: <link rel="stylesheet" href="/css/style.css">
+#+HTML_HEAD: <link rel="icon" type="image/png" href="https://unluckylisp.com/favicon.png">
+#+HTML_HEAD: <link rel="alternate" type="application/atom+xml" href="/blog/index.atom" title="wizard book (atom)">
+#+HTML_HEAD: <meta name="fediverse:creator" content="@wizardbook@mastodon.social">
+#+HTML_HEAD: <link rel="me" href="https://mastodon.social/@wizardbook" />
+#+HTML_HEAD: <meta property="og:title" content="unluckylisp">
+#+HTML_HEAD: <meta property="og:description" content="A site about wizards and programming.">
+#+HTML_HEAD: <meta property="og:url" content="https://unluckylisp.com/">
+#+HTML_HEAD: <meta property="og:type" content="website">
+#+HTML_HEAD: <meta name="twitter:card" content="summary">
+#+HTML_HEAD: <meta name="twitter:title" content="unluckylisp">
+#+HTML_HEAD: <meta name="twitter:description" content="A site about wizards and programming.">
+
+#+TITLE: unluckylisp
+
+#+BEGIN_EXPORT html
+<div class="pixel-frame">
+<header class="main-header">
+  <a href="/" class="header-logo"></a>
+</header>
+
+<hr>
+<h3><u>URGENT</u>: <br>IN NEED OF MORE <a href="/catswithsicp/">CATS WITH SICP</a></h3><small>please e-mail <a href="mailto:wizard@unluckylisp.com">wizard@unluckylisp.com</a> with your pictures of Cats with Sicp</small>
+<br>
+<hr>
+
+<h2>unluckylisp</h2>
+
+#+END_EXPORT
+
+
+#+BEGIN_EXPORT html
+</header>
+<main>
+<ul class="link-list">
+
+<b>Auxilary services:</b>
+<li><a href="https://mail.unluckylisp.com">unluckyLisp mail</a><br>
+<small>an Exclusive invite-only mail service for Exclusive people with Exclusive interest<br>
+(server unluckylisp.com // default secure ports IMAP/SMTP)</small><br>
+<li><a href="/blog/">THE BLOG</a> (<a href="/blog/index.atom">atom</a>)
+<br><br>
+</ul>
+<hr>
+
+<ul class="link-list">
+<b>Certified communities:</b>
+<li><a href="https://goatse.world/home">Textboard</a><br>
+<small>vent to the world!</small>
+<li><a href="https://paperchan.club/">Drawing imageboard</a><br>
+<small>paperchan.club is run by friend, and is fun pictochat reimagination</small>
+<li><a href="https://v.4x13.net">Voice board</a><br>
+<small>4x13's textboard is reincarnated as a Voice/sound board, imagine vocaroo + *chan site! it's Revolutionary</small>
+<br><br>
+</ul>
+<hr>
+
+<ul class="link-list">
+<b>the Wizard of unluckylisp dot com OR some of my hobbyisms and stuff</b>
+<li><a href="/projects/">Projects</a>
+<li><a href="https://lispermane.bandcamp.com/">Music</a>
+<li><a href="/database/">Akai's Database</a>
+<li><a href="/resources/">Web Resources</a>
+<li><a href="/contact/">Contact</a>
+
+</ul>
+
+<section class="disclaimer">
+
+> If you’d like to support the site:<br>
+<u>LTC</u>: <code>ltc1q2x72g79uys6q535wswgw3gtxes63dwxg28ghze</code>
+<br>
+You could also donate to me through my music projects on <a href="https://lispermane.bandcamp.com/">bandcamp</a>
+</section>
+</main>
+</div>
+
+#+END_EXPORT

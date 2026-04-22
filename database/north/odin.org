@@ -1,0 +1,53 @@
+#+OPTIONS: toc:nil num:nil author:nil creator:nil title:nil
+
+#+LANGUAGE: en
+#+HTML_HEAD: <meta charset="utf-8">
+#+HTML_HEAD: <meta name="viewport" content="width=device-width, initial-scale=1">
+#+HTML_HEAD: <link rel="stylesheet" href="/css/style.css">
+#+HTML_HEAD: <link rel="icon" type="image/png" href="https://unluckylisp.com/favicon.png">
+#+HTML_HEAD: <link rel="alternate" type="application/atom+xml" href="/blog/index.atom" title="wizard book (atom)">
+#+HTML_HEAD: <meta name="fediverse:creator" content="@wizardbook@mastodon.social">
+#+HTML_HEAD: <link rel="me" href="https://mastodon.social/@wizardbook" />
+#+HTML_HEAD: <meta property="og:title" content="unluckylisp">
+#+HTML_HEAD: <meta property="og:description" content="A site about wizards and programming.">
+#+HTML_HEAD: <meta property="og:url" content="https://unluckylisp.com/">
+#+HTML_HEAD: <meta property="og:type" content="website">
+#+HTML_HEAD: <meta name="twitter:card" content="summary">
+#+HTML_HEAD: <meta name="twitter:title" content="unluckylisp">
+#+HTML_HEAD: <meta name="twitter:description" content="A site about wizards and programming.">
+
+#+TITLE: Northern Tradition: The God Odin
+
+#+BEGIN_EXPORT html
+<div class="pixel-frame">
+<header class="main-header">
+<a href="/"><img src="/image/lambdae.png"></a>
+
+<small>[<a href="/database/">Akai's Database</a>]</small> > [<small><a href="/database/north/">Northern Tradition home</a></small>]
+<h2>Allfather Odin</h2>
+
+
+
+#+END_EXPORT
+
+ᚠᚢᚦᚨᚱᚲᚷᚹᚺᚾᛁᛃᛇᛈᛉᛋᛏᛒᛖᛗᛚᛜᛞᛟ
+
+Most commonly, a good introduction to the Runestaves is the Elder Futhark.
+
+The Elder Futhark has a great division of the mysteries in 3 Aett forms, when the row is broken up as shown below:
+
+1. ᚠᚢᚦᚨᚱᚲᚷᚹ
+2. ᚺᚾᛁᛃᛇᛈᛉᛋ
+3. ᛏᛒᛖᛗᛚᛜᛞᛟ
+
+There are lots of ways to observe the Elder, but this is the most common. I won't dive too much into the purpose or esoteric qualities of the Elder Futhark as I think it is important for those beginning in the runes to discover what the runes and their ordering mean to them!
+ 
+/Note: This page includes some extra runes from the Anglo-Saxon Futhorc as well./
+
+_Contents:_
+#+TOC: headlines 3 local
+
+* Fehu ᚠ
+ :PROPERTIES:
+ :CUSTOM_ID: Fehu
+ :END:

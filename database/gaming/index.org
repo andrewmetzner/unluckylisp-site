@@ -1,0 +1,37 @@
+#+OPTIONS: toc:nil num:nil author:nil creator:nil title:nil
+
+#+LANGUAGE: en
+#+HTML_HEAD: <meta charset="utf-8">
+#+HTML_HEAD: <meta name="viewport" content="width=device-width, initial-scale=1">
+#+HTML_HEAD: <link rel="stylesheet" href="/css/style.css">
+#+HTML_HEAD: <link rel="icon" type="image/png" href="https://unluckylisp.com/favicon.png">
+#+HTML_HEAD: <link rel="alternate" type="application/atom+xml" href="/blog/index.atom" title="wizard book (atom)">
+#+HTML_HEAD: <meta name="fediverse:creator" content="@wizardbook@mastodon.social">
+#+HTML_HEAD: <link rel="me" href="https://mastodon.social/@wizardbook" />
+#+HTML_HEAD: <meta property="og:title" content="unluckylisp">
+#+HTML_HEAD: <meta property="og:description" content="A site about wizards and programming.">
+#+HTML_HEAD: <meta property="og:url" content="https://unluckylisp.com/">
+#+HTML_HEAD: <meta property="og:type" content="website">
+#+HTML_HEAD: <meta name="twitter:card" content="summary">
+#+HTML_HEAD: <meta name="twitter:title" content="unluckylisp">
+#+HTML_HEAD: <meta name="twitter:description" content="A site about wizards and programming.">
+
+#+TITLE: Gaming [Akai's Database]
+
+#+BEGIN_EXPORT html
+<div class="pixel-frame">
+<header class="main-header">
+  <a href="/" class="header-logo"></a>
+</header>
+
+<small>[<a href="/database/">Back to Akai's Database</a>]</small>
+<h2>Gaming</h2>
+
+<div class="outline-text-2">
+Games Games Games Games Games No game no life
+</div>
+#+END_EXPORT
+
+#+TOC: headlines 3 local
+
+- @@html:<a href="/database/gaming/prison-pinochle.html">Prison Pinochle</a>@@

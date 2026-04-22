@@ -1,0 +1,119 @@
+#+OPTIONS: toc:nil num:nil author:nil creator:nil title:nil
+#+OPTIONS: broken-links:t
+#+OPTIONS: \n:t
+
+#+LANGUAGE: en
+#+HTML_HEAD: <meta charset="utf-8">
+#+HTML_HEAD: <meta name="viewport" content="width=device-width, initial-scale=1">
+#+HTML_HEAD: <link rel="stylesheet" href="/css/style.css">
+#+HTML_HEAD: <link rel="icon" type="image/png" href="https://unluckylisp.com/favicon.png">
+#+HTML_HEAD: <link rel="alternate" type="application/atom+xml" href="/blog/index.atom" title="wizard book (atom)">
+#+HTML_HEAD: <meta name="fediverse:creator" content="@wizardbook@mastodon.social">
+#+HTML_HEAD: <link rel="me" href="https://mastodon.social/@wizardbook" />
+#+HTML_HEAD: <meta property="og:title" content="unluckylisp">
+#+HTML_HEAD: <meta property="og:description" content="A site about wizards and programming.">
+#+HTML_HEAD: <meta property="og:url" content="https://unluckylisp.com/">
+#+HTML_HEAD: <meta property="og:type" content="website">
+#+HTML_HEAD: <meta name="twitter:card" content="summary">
+#+HTML_HEAD: <meta name="twitter:title" content="unluckylisp">
+#+HTML_HEAD: <meta name="twitter:description" content="A site about wizards and programming.">
+
+
+#+TITLE: contact me
+
+#+BEGIN_EXPORT html
+<div class="pixel-frame">
+<header class="main-header">
+  <a href="/" class="header-logo"></a>
+</header>
+
+<h2>Contact me</h2>
+<p>yeah i have a lot of different usernames. it is by design.</p>
+
+<p><strong>I have a GPG key</strong>:
+
+<a href="/contact/wiz-pubkey-120225.txt">my Current key</a>
+#+END_EXPORT
+#+BEGIN_EXAMPLE gpg
+pub   ed25519/7A5AEB6434A77F8D 2025-07-27 [SC] [expires: 2030-10-16]
+      38590CE86415582FC9301DF37A5AEB6434A77F8D
+uid     [ultimate] Andrew Metzner (main) <wizard@unluckylisp.com>
+uid     [ultimate] Andrew Metzner (alt) <andrewmetzner@disroot.org>
+uid     [ultimate] Andrew Metzner (activism) <luckless-wizard@riseup.net>
+sub   cv25519/1FF5CA459820B297 2025-07-27 [E] [expires: 2027-07-27]
+#+END_EXAMPLE
+#+BEGIN_EXPORT html
+<small>old keys (for reference):
+ <a href="/contact/wiz-pubkey-101625.txt">wiz-pubkey-101625.txt</a> // <a href="/contact/oldkey.txt">oldkey.txt</a></small>
+
+<hr>
+<div class="contact-list">
+  <p><strong>E-mail (unluckyLisp mail)</strong> <br>
+   <a href="mailto:wizard@unluckylisp.com">Andrew Metzner &lt;wizard@unluckylisp.com&gt;</a> <br>
+   <a href="mailto:akai@unluckylisp.com">Andrew Metzner &lt;akai@unluckylisp.com&gt;</a> <br>
+   <a href="mailto:andrewmetzner@unluckylisp.com">Andrew Metzner &lt;andrewmetzner@unluckylisp.com&gt;</a> <br>
+   </p>
+   <p><strong>E-mail (other/alts)</strong> <br>
+  <a href="mailto:andrewmetzner@disroot.org">Andrew Metzner &lt;andrewmetzner@disroot.org&gt;</a> <br>
+  <a href="mailto:luckless-wizard@riseup.net">Andrew Metzner &lt;luckless-wizard@riseup.net&gt;</a></p>
+<hr>
+  <p><strong>Github</strong> <br>
+  <a rel="me" href="https://github.com/andrewmetzner">git@github.com:andrewmetzner/</a></p>
+<hr>
+  <p><strong>XMPP</strong> <br>
+  <a href="xmpp:akai@magicbroccoli.de">akai@magicbroccoli.de</a><br>
+  <s><a href="xmpp:akai@gikopoi.com">akai@gikopoi.com</a></s> (old, not used)<br>
+  <s><a href="xmpp:luckless-wizard@magicbroccoli.de">luckless-wizard@magicbroccoli.de</a></s> (old, not used)<br>
+  <small>
+Currently my XMPP has no OMEMO support.<br>
+I use <a href="https://emacs-jabber.sourceforge.net/">Emacs Jabber</a>, a very minimal/limited client.<br>
+ </small>
+  </p>
+<hr>
+  <p><strong>Deltachat</strong> <br>
+  <a href="https://i.delta.chat/#B1297301B6CFA1B4AE033960586FE067D897067C&i=KIJUobA2kuulNgYBDemlMDBm&s=KaXFRlgqSgfO6GgsDKYJkrTf&a=wizard%40unluckylisp.com&n=akai">wizard@unluckylisp.com</a><br>
+<small>if not able to add e-mail directly, click above for friend link</small>
+  </p>
+<hr>
+  <p><strong>ActivityPub</strong> <br> 
+  <a rel="me" href="https://v2.flyingcube.tech/akai">@akai@v2.flyingcube.tech</a><br>
+  <small>
+main microblogging
+  </small>
+    </p>
+    <p>
+  <a rel="me" href="https://dsmc.space/akai">@akai@dsmc.space</a> (alt)<br>
+  <small>
+shout out my boys at dsmc @w0rm , eternally grateful to have dead cells + all DLCs because of this dude , <3 metroidvania <3
+  </small>
+  </p>
+  </p>
+    <p> 
+  <a rel="me" href="https://clubcyberia.co/akai">@akai@clubcyberia.co</a> (alt)<br>
+  <small>
+old home
+  </small>
+  </p>
+      <p>
+  <a rel="me" href="https://sacred.harpy.faith/akai">@akai@sacred.harpy.faith</a> (alt)<br>
+  <small>
+zergling's instance
+  </small>
+  </p>
+  <p>
+  <s><a rel="me" href="https://mastodon.social/@wizardbook">@wizardbook@mastodon.social</a></s><br>
+  <small>
+retired
+  </small>
+  </p>
+<hr>  
+   <p><strong>Discord</strong> <br> 
+  <a rel="me" href="https://discordapp.com/users/1399980940742361239">unluckylisp</a><br>
+  <small>
+am i one of the cool kids yet (dood my frens on discord)
+  </small>
+  </p>
+</div>
+#+END_EXPORT
+
+

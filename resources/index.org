@@ -1,0 +1,220 @@
+#+OPTIONS: toc:nil num:nil author:nil creator:nil title:nil
+
+#+LANGUAGE: en
+#+HTML_HEAD: <meta charset="utf-8">
+#+HTML_HEAD: <meta name="viewport" content="width=device-width, initial-scale=1">
+#+HTML_HEAD: <link rel="stylesheet" href="/css/style.css">
+#+HTML_HEAD: <link rel="icon" type="image/png" href="https://unluckylisp.com/favicon.png">
+#+HTML_HEAD: <link rel="alternate" type="application/atom+xml" href="/blog/index.atom" title="wizard book (atom)">
+#+HTML_HEAD: <meta name="fediverse:creator" content="@wizardbook@mastodon.social">
+#+HTML_HEAD: <link rel="me" href="https://mastodon.social/@wizardbook" />
+#+HTML_HEAD: <meta property="og:title" content="unluckylisp">
+#+HTML_HEAD: <meta property="og:description" content="A site about wizards and programming.">
+#+HTML_HEAD: <meta property="og:url" content="https://unluckylisp.com/">
+#+HTML_HEAD: <meta property="og:type" content="website">
+#+HTML_HEAD: <meta name="twitter:card" content="summary">
+#+HTML_HEAD: <meta name="twitter:title" content="unluckylisp">
+#+HTML_HEAD: <meta name="twitter:description" content="A site about wizards and programming.">
+
+#+TITLE: resources
+
+#+BEGIN_EXPORT html
+<div class="pixel-frame">
+<header class="main-header">
+  <a href="/" class="header-logo"></a>
+</header>
+<h2>resources</h2>
+
+<div class="outline-text-2">
+This is a collection of resources throughout the web.</div>
+#+END_EXPORT
+
+#+TOC: headlines 3 local
+
+* Pokemon
+ :PROPERTIES:
+ :CUSTOM_ID: pokemon
+ :END:
+
+- News/info
+  - serebii.net
+    https://serebii.net/
+    *custom serebii.net rss feed*
+    https://unluckylisp.com/projects/serebii/serebii.xml
+  - bulbapedia news
+    https://bulbagarden.net/home/
+  - bulbapedia wiki
+    https://bulbapedia.bulbagarden.net/wiki/Main_Page
+
+- cool sites / blogs
+  - cave of dragonflies
+    https://www.dragonflycave.com/
+    gen I capture mechanics
+    https://www.dragonflycave.com/mechanics/gen-i-capturing/
+  - lyra made a website
+    https://lyra-made-a.website/
+  - gen II headbutt tracker
+    https://www.tshadowknight.com/Headbutt%20Grid.htm
+  
+* Yu-Gi-Oh
+ :PROPERTIES:
+ :CUSTOM_ID: ygo
+ :END:
+hit me up on chat and we can play
+
+- Clients
+  - ygo pro client (linux/windows/mac/android/ios)
+    https://ygopro.org/downloads/
+  - edopro client (linux/windows/mac/android)
+    https://projectignis.github.io/
+  
+- yugioh card databases
+  - best database
+    https://ygoprodeck.com/
+  - releases
+    https://www.yugioh-card.com/en/
+  - pack database (image)
+    https://ygoprodeck.com/packs/
+  - pack database (text)
+    https://www.db.yugioh-card.com/yugiohdb/card_list.action
+  - pack sim
+    https://ygoprodeck.com/pack-sim/
+  - top decks
+    https://www.yugiohmeta.com/top-decks
+  - Battle Pack 1-3
+    https://ygoprodeck.com/pack/Battle%20Pack%3A%20Epic%20Dawn
+    https://ygoprodeck.com/pack/Battle%20Pack%202%3A%20War%20of%20the%20Giants
+    https://ygoprodeck.com/pack/Battle%20Pack%203:%20Monster%20League
+    MR2, common cards we make decks with
+
+- formats
+  - edison format
+    https://www.edisonformat.com/
+    - simulator for edison format
+      https://edisonformat.net/beginners/simulators
+  - goat format
+    https://www.goatformat.com/
+  - all format library
+    https://formatlibrary.com/formats/
+
+- utils / other
+  - Easy deck builder
+    https://ygoprodeck.com/master-duel/arena/
+  - deck sharing
+    https://decks.ygoresources.com/
+  - general info
+    https://yugipedia.com/wiki/Yugipedia
+  - history of yugioh cards yt playlist
+    https://www.youtube.com/playlist?list=PLpAqSYsFkgvsOKDAAEzj4dCIAfFjwtY0y
+  - other fun links
+    https://yugioh.fandom.com/wiki/Sealed_Format
+    https://yugioh.fandom.com/wiki/Sneak_Peek
+    https://yugioh.fandom.com/wiki/Draft_Format
+
+* Online Board Games / Fun
+ :PROPERTIES:
+ :CUSTOM_ID: games
+ :END:
+
+#+OPTIONS: \n:t
+
+- lichess.org 
+  https://lichess.org/
+  I prefer playing chess here. user is ametzner. better to just contact me elsewhere and we setup a game there.
+
+  
+- bgammon.org
+  https://play.bgammon.org/
+  Free and open-source backgammon. Guests allowed / no login required.
+
+  
+- tenhou.net (riichi mahjong client)
+  https://tenhou.net/
+  /Basically mahjong like a yakuza/
+  - Recommended readings
+    - Mahjong resources
+      https://mahjong.ie/mahjong-resources/
+    - Not a Japanese speaker?
+      You can get an extension to translate tenhou web client:
+      https://mahjong.ie/tenhou/
+
+      
+- skribbl.io
+  https://skribbl.io/
+  Basically pictionary. Allows custom words. No sign up needed to play.
+  
+* Nipponese communities
+ :PROPERTIES:
+ :CUSTOM_ID: nippon
+ :END:
+ Nipponese is a term from Neil Stephenson's "/Snow Crash/", a classic cyberpunk novel. It was really ahead of its time. Nipponese, for me, is a better alternative term to the popular terms otaku or weeaboo.
+ 
+#+OPTIONS: \n:t
+- gikopoipoi
+  https://gikopoipoi.net
+  - /"like gikopoi"/ Successor to the original Japanese flash chatgame Gikopoi.
+  - There are streaming rooms. (public & private)
+  - Active Japanese and Foreign servers.
+  - Name & preferred room: @@html:<code>◆wizardTREQ</code>@@ in /Hacker's Office/ (/_for/). My presence is sporadic, but I like this place to stream with friends sometimes.
+
+    
+- gikopoi.com
+  https://gikopoi.com
+  - alt poi, like poipoi, but with custom characters and maps (also websockets / bot friendly)
+  - primarily international, EFL/ESL crowds
+  - I am known as @@html:<code>Akai◆giko//JRnk</code>@@, but I also log in as @@html:<code>◆wizardTREQ</code>@@.
+    /Proud to have been a member of this international super structure staff at one point./
+
+    
+- Flying Cube Technology
+  https://flyingcube.tech
+  - Pleroma & matrix host, primarily federating/centered Nipponese-related content
+
+    
+- Sageru -The unholy citadel of 6ch-
+  https://sageru.org/
+  🐝🐝🐝🐝🐝🐝🐝🐝🐝🐝🐝🐝
+  https://sageru.org/irc/
+  irc.sageru.org/6697 #jp
+
+- paperchan club
+  https://paperchan.club/
+  Anonymous drawing/image-board inspired by pictochat and 4chan
+    
+* Programming manuals/books
+ :PROPERTIES:
+ :CUSTOM_ID: programming-manuals
+ :END:
+
+#+OPTIONS: \n:t
+- Structure and Interpretation of Computer Programs (MIT)
+  https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/index.html
+- GNU Emacs manual
+  https://www.gnu.org/software/emacs/manual/html_node/emacs/index.html
+- Emacs-Lisp manual
+  https://www.gnu.org/software/emacs/manual/html_node/elisp/index.html
+
+* Friends
+ :PROPERTIES:
+ :CUSTOM_ID: friends
+ :END:
+
+ ma peeps :3
+
+#+OPTIONS: \n:t
+- 4x13
+  https://4x13.net
+- Art by Ringo
+  https://ringoart.com
+- icy (Under construction)
+  https://n0.pw/
+- killsushi (txt/imgboard archiver/historian)
+  https://14get.helioho.st/
+- meltingwax
+  https://meltingwax.net/
+- vulonkaaz
+  https://vulonkaaz.zip
+- zergling
+  http://rakka.au/
+- zoomy
+  https://temple-moss.neocities.org/
