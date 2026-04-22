@@ -35,7 +35,7 @@ This page displays some of the relevant, ongoing work/programming projects I hav
 
 * Graphics
 
-** fractal-generator
+** _fractal-generator_
  :PROPERTIES:
  :CUSTOM_ID: fractal-generator
  :END:
