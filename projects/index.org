@@ -45,7 +45,7 @@ This page displays some of the relevant, ongoing work/programming projects I hav
 #+END_EXPORT
 
 
-** rgb bit bot
+** _rgb bit bot_
  :PROPERTIES:
  :CUSTOM_ID: rgb bit bot
  :END:
@@ -58,7 +58,7 @@ This page displays some of the relevant, ongoing work/programming projects I hav
  :CUSTOM_ID: emacs
  :END:
 
-** ganzu-gikoru
+** _ganzu-gikoru_
  :PROPERTIES:
  :CUSTOM_ID: ganzu-gikoru
  :END:
@@ -67,7 +67,7 @@ This page displays some of the relevant, ongoing work/programming projects I hav
 <a href="https://github.com/andrewmetzner/ganzu-gikoru">ganzu-gikoru</a> is a simple static blog generator, written in Emacs Lisp. I was inspired by different software, like the <a href="https://gohugo.io/">Hugo software</a>, to write my own blog generator. I found good results from making my own blogging software, as certain aspects are mutable. Most blog software just gives user styling freedoms, and certain aspects of the generator are just part of the nature. I strive to continue to develop ganzu-gikoru to be more and more mutable, so that GNU Emacs users can add functions as well as modify existing variables and functions to their liking.
 #+END_EXPORT
  
-** org-pomodoro
+** _org-pomodoro_
  :PROPERTIES:
  :CUSTOM_ID: org-pomodoro
  :END:
@@ -81,7 +81,7 @@ This page displays some of the relevant, ongoing work/programming projects I hav
  :CUSTOM_ID: games
  :END:
 
-** Rogue re-creation
+** _Rogue re-creation_
  :PROPERTIES:
  :CUSTOM_ID: rogue
  :END:
@@ -94,10 +94,10 @@ A recreation of rogue ASCII dungeon crawler.<br>
  
 * Leisure
  :PROPERTIES:
- :CUSTOM_ID: games
+ :CUSTOM_ID: leisure
  :END:
  
-** serebii-feed (scraper)
+** _serebii-feed (scraper)_
  :PROPERTIES:
  :CUSTOM_ID: serebii-feed
  :END:
